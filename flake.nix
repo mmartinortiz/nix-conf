@@ -17,9 +17,9 @@
     , ...
     }:
     let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
     {
       homeManagerConfigurations = {
         manolo = home-manager.lib.homeManagerConfiguration {
@@ -29,5 +29,5 @@
           ];
         };
       };
-    });
+    };
 }
