@@ -21,17 +21,12 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      devShells.default = pkgs.mkShell {
-        packages = with pkgs; [ alejandra ];
-      };
       homeManagerConfigurations = {
-        myhome = home-manager.lib.homeManagerConfiguration {
+        manolo = home-manager.lib.homeManagerConfiguration {
           inherit system pkgs;
-          configuration = {
-            imports = [
-              ./home.nix
-            ];
-          };
+          modules = [
+            ./home-manager/home.nix
+          ];
         };
       };
     });

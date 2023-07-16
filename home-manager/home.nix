@@ -20,6 +20,7 @@
       dua
       duf
       du-dust
+      neofetch
       nixpkgs-fmt
       vim
     ];
