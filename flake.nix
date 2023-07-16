@@ -22,7 +22,7 @@
     in
     {
       homeManagerConfigurations = {
-        manolo = home-manager.lib.homeManagerConfiguration {
+        <username> = home-manager.lib.homeManagerConfiguration {
           inherit system pkgs;
           modules = [
             ./home-manager/home.nix
