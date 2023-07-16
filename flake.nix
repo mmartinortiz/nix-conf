@@ -10,27 +10,29 @@
     flake-utils.inputs.systems.follows = "systems";
   };
 
-  outputs = {
-    nixpkgs,
-    flake-utils,
-    home-manager,
-    ...
-  }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {inherit system;};
-    in {
+  outputs =
+    { nixpkgs
+    , flake-utils
+    , home-manager
+    , ...
+    }:
+    flake-utils.lib.eachDefaultSystem (system:
+    let
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
       devShells.default = pkgs.mkShell {
-        packages = with pkgs; [alejandra];
+        packages = with pkgs; [ alejandra ];
       };
       homeManagerConfigurations = {
-      myhome = home-manager.lib.homeManagerConfiguration {
-        inherit system pkgs;
-        configuration = {
-          imports = [
-          ./home.nix
-          ];
+        myhome = home-manager.lib.homeManagerConfiguration {
+          inherit system pkgs;
+          configuration = {
+            imports = [
+              ./home.nix
+            ];
+          };
         };
       };
-    };
     });
 }
