@@ -24,7 +24,7 @@
       homeManagerConfigurations = {
         <username> = home-manager.lib.homeManagerConfiguration {
           inherit system pkgs;
-          modules = [
+          imports = [
             ./home-manager/home.nix
           ];
         };
