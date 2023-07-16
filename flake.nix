@@ -13,6 +13,7 @@
   outputs = {
     nixpkgs,
     flake-utils,
+    home-manager,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -21,5 +22,15 @@
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [alejandra];
       };
+      homeManagerConfigurations = {
+      myhome = home-manager.lib.homeManagerConfiguration {
+        inherit system pkgs;
+        configuration = {
+          imports = [
+          ./home.nix
+          ];
+        };
+      };
+    };
     });
 }
