@@ -4,6 +4,8 @@
     home-manager.enable = true;
   };
   imports = [
+    # Example of application configuration.
+    # Note that 'micro' does not need to be indicated bellow, under the packages section
     ./apps/micro.nix
   ];
   home = {
