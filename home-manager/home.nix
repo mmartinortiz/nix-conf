@@ -51,6 +51,7 @@
       nixpkgs-fmt
       rg
       vim
+      wget2
     ];
 
     sessionVariables = {
