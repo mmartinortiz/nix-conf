@@ -2,12 +2,13 @@
   programs.vim = {
     enable = true;
     defaultEditor = true;
-    vimPlugins = [
-      pkgs.vimPlugins.vim-fish
-      pkgs.vimPlugins.gitgutter
-      pkgs.vimPlugins.commentary
-      pkgs.vimPlugins.surround
+    plugins = with pkgs.vimPlugins; [
+      commentary
+      gitgutter
+      surround
+      The_NERD_tree
+      vim-fish
     ];
-    extraConfig = builtins.readFile vimrc;
+    extraConfig = builtins.readFile apps/vimrc;
   };
 }
