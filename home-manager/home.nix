@@ -10,12 +10,14 @@
         prettybat
       ];
     };
-    
+
   };
   imports = [
     # Example of application configuration.
     # Note that 'micro' does not need to be indicated bellow, under the packages section
+    ./apps/fish.nix
     ./apps/micro.nix
+    ./apps/vim.nix
   ];
   home = {
     # Home Manager needs a bit of information about you and the paths it should manage:
