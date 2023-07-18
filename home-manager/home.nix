@@ -2,7 +2,16 @@
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
-
+    exa = {
+      enable = true;
+      enableAliases = true;
+      icons = true;
+    };
+    dircolors = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+    };
     bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [
