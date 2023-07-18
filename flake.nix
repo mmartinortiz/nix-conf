@@ -35,5 +35,11 @@
           ];
         };
       };
+
+      # Custom packages; acessible via 'nix build', 'nix shell', etc
+      packages = flake-utils.lib.eachDefaultSystem (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in import ./nixpkgs.nix { inherit pkgs; }
+      );
     };
 }
