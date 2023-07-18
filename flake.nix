@@ -21,12 +21,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      # Devshell for bootstrapping; acessible via 'nix develop' or 'nix-shell' (legacy)
-      devShells = flake-utils.lib.eachDefaultSystem (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
-      );
-
       homeConfigurations = {
         manolo = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
@@ -35,11 +29,5 @@
           ];
         };
       };
-
-      # Custom packages; acessible via 'nix build', 'nix shell', etc
-      packages = flake-utils.lib.eachDefaultSystem (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./nixpkgs.nix { inherit pkgs; }
-      );
     };
 }
