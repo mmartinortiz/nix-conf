@@ -40,17 +40,13 @@
     stateVersion = "23.05";
     packages = with pkgs; [
       alejandra
-      batcat
       chafa
       deadnix
       du-dust
       dua
       duf
-      exa
       neofetch
       nixpkgs-fmt
-      rg
-      vim
       wget2
     ];
 

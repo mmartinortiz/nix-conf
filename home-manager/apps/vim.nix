@@ -9,6 +9,6 @@
       The_NERD_tree
       vim-fish
     ];
-    extraConfig = builtins.readFile apps/vimrc;
+    extraConfig = builtins.readFile ./vimrc;
   };
 }
