@@ -20,6 +20,10 @@
       tree = "exa --tree";
       wget = "wget2";
     };
+    interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
+      (builtins.readFile ./config.fish)
+      "set -g SHELL ${pkgs.fish}/bin/fish"
+    ]));
     functions =
       {
         __fish_command_not_found_handler = {
