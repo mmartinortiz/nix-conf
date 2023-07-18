@@ -1,4 +1,11 @@
 {
+  # fish cannot be set as the default shell of the user because fish shell is not
+  # accessible by chsh. One solution is to sneak the fish shell on bash
+  home.file.".bashrc" = lib.mkIf config.programs.fish.enable {
+    text = ''
+      exec ${config.programs.fish.package}/bin/fish
+    '';
+  };
   programs.fish = {
     enable = true;
     shellAliases = {
