@@ -45,9 +45,9 @@
       du-dust
       dua
       duf
+      grc
       neofetch
       nixpkgs-fmt
-      tilix
       wget2
       (pkgs.nerdfonts.override { fonts = [ "Hack" "UbuntuMono" "FiraCode" ]; })
     ];
