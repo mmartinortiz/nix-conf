@@ -48,3 +48,7 @@ nix flake check
 nix run . switch # or
 nix develop
 ```
+
+## Other people's Nix config
+
+- [Wimpy's NixOS & Home Manager Configurations](<https://github.com/wimpysworld/nix-config/tree/039e2f0151b03b9a3aa2991230a6becf75d91c43>)
