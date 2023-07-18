@@ -1,10 +1,21 @@
 # My Nix configuration
 
+## Dependencies
+
+- git
+- curl
+
+```bash
+sudo apt install --yes git curl
+```
+
 ## Install Nix
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
+
+After installing `nix` reopen the terminal for reloading the `PATH` variable.
 
 ## Install Home Manager
 
@@ -26,7 +37,7 @@ nix run nixpkgs#home-manger -- switch --flake .
 
 # Alternatively
 
-nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf
+nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
 ```
 
 ```shell
