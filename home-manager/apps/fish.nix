@@ -1,3 +1,5 @@
+{ config, lib, ... }:
+
 {
   # fish cannot be set as the default shell of the user because fish shell is not
   # accessible by chsh. One solution is to sneak the fish shell on bash
