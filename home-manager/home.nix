@@ -19,7 +19,11 @@
         prettybat
       ];
     };
-
+    git = {
+      enable = true;
+      userName = "Manuel";
+      userEmail = "mmartinortiz@gmail.com";
+    }
   };
   imports = [
     # Example of application configuration.
@@ -48,6 +52,11 @@
       grc
       neofetch
       nixpkgs-fmt
+      python311.withPackages
+      (p: with p; [
+        venv
+        pipx
+      ])
       wget2
       (pkgs.nerdfonts.override { fonts = [ "Hack" "UbuntuMono" "FiraCode" ]; })
     ];
