@@ -45,6 +45,28 @@ nix run nixpkgs#home-manger -- switch --flake .
 nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
 ```
 
+## Calculate the sha256 has of a Git repository
+
+Despite what says here or here, the only way I found to make it "work" is letting it fail the first time and then use the Hash calculated by Nix
+
+```nix
+{
+  name = "fish-autovenv";
+  src = pkgs.fetchFromGitHub {
+    owner = "mmartinortiz";
+    repo = "fish-autovenv";
+    rev = "1.0.0";
+    sha256 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+  };
+}
+```
+
+```bash
+error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0swsvgvzsc6wkfk-source.drv':
+  specified: sha256-zBB5Ow4FfzhM8QXRT0E174ZHessf1OU57K8co+ReuFw=
+    got:     sha256-f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo= # Use this one.
+```
+
 ## Resources
 
 - [Home Manager manual](<https://nix-community.github.io/home-manager/>)

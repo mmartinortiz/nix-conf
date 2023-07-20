@@ -43,7 +43,7 @@
           owner = "mmartinortiz";
           repo = "fish-autovenv";
           rev = "1.0.0";
-          sha256 = "bbb228e3b975e9b9962e03060be6b5614bcea160bd5221c5b510b3ba60949cf6";
+          sha256 = "f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo=";
         };
       }
     ];
