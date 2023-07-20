@@ -18,9 +18,12 @@
       diff = "diffr";
       glow = "glow --pager";
       ip = "ip --color --brief";
+      ls = "exa --all --group-directories-first --icons";
+      ll = "exa --long --git --group-directories-first --icons";
+      lt = "exa --tree --group-directories-first --icons";
       less = "bat --paging=always";
       more = "bat --paging=always";
-      tree = "exa --tree";
+      tree = "exa --tree --group-directories-first";
       wget = "wget2";
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
@@ -34,15 +37,15 @@
       { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
       { name = "bass"; src = pkgs.fishPlugins.bass.src; }
       { name = "pisces"; src = pkgs.fishPlugins.pisces.src; }
-      # {
-      #   name = "fish-autovenv";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "mmartinortiz";
-      #     repo = "fish-autovenv";
-      #     rev = "";
-      #     sha256 = "";
-      #   };
-      # }
+      {
+        name = "fish-autovenv";
+        src = pkgs.fetchFromGitHub {
+          owner = "mmartinortiz";
+          repo = "fish-autovenv";
+          rev = "1.0.0";
+          sha256 = "d1ad33c8244df1079abbabf4294fa940b55202801a2b333ccb1a65bf61e15de1";
+        };
+      }
     ];
     functions =
       {

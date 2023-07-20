@@ -4,7 +4,6 @@
     home-manager.enable = true;
     exa = {
       enable = true;
-      enableAliases = true;
       icons = true;
     };
     dircolors = {
