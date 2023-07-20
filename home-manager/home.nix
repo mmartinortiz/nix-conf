@@ -52,6 +52,10 @@
       grc
       neofetch
       nixpkgs-fmt
+      python311
+      python311Packages.pip
+      python311Packages.pipx
+      python311Packages.virtualenv
       wget2
       (pkgs.nerdfonts.override { fonts = [ "Hack" "UbuntuMono" "FiraCode" ]; })
     ];

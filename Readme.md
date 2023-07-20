@@ -61,12 +61,12 @@ nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
 - [ ] Include the auto-venv fish plugin
 - [ ] Install 'simple-ass-prompt'
 - [ ] Incorporate fish functions
-- [ ] Git configuration
+- [x] Git configuration
 - [ ] SSH Configuration
 - [ ] Install Go
 - [ ] Install Rust
-- [ ] Install Python 3.11 with venv
-- [ ] Install pipx and some programs (probably I do not need pipx for the apps)
+- [x] Install Python 3.11 with venv
+- [x] Install pipx and some programs (probably I do not need pipx for the apps)
   - [ ] ipython
   - [ ] mu-editor
   - [ ] esptool
