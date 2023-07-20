@@ -47,7 +47,7 @@ nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
 
 ## Calculate the sha256 has of a Git repository
 
-Despite what says here or here, the only way I found to make it "work" is letting it fail the first time and then use the Hash calculated by Nix
+Despite what says [here](<https://github.com/NixOS/nixpkgs/issues/191128>) or [here](<https://stackoverflow.com/questions/31659527/what-is-the-meaning-of-sha256-in-nixpkgs-fetchgit-where-does-the-value-come-fro>), the only way I found to make it "work" is letting it fail the first time and then use the Hash calculated by Nix
 
 ```nix
 {
@@ -80,7 +80,7 @@ error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0sw
 
 ## TODOs
 
-- [ ] Include the auto-venv fish plugin
+- [x] Include the auto-venv fish plugin
 - [ ] Install 'simple-ass-prompt'
 - [ ] Incorporate fish functions
 - [x] Git configuration
