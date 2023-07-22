@@ -30,6 +30,7 @@
       ga = "git add";
       gc = "git commit";
       gp = "git push";
+      nr = "nix run nixpkgs#home-manager -- switch --flake .";
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
       (builtins.readFile ./config.fish)
