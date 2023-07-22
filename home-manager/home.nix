@@ -37,19 +37,25 @@
     # See the Home Manager release notes for a list of state version changes in each release.
     stateVersion = "23.05";
     packages = with pkgs; [
-      alejandra
-      chafa
+      chafa # Terminal image viewer
       deadnix
+      diffr # Modern Unix `diff`
       du-dust
-      dua
-      duf
-      grc
+      dua # Modern Unix `du`
+      duf # Modern Unix `df`
+      fd # Modern Unix `find`
+      glow # Terminal Markdown renderer
+      gping # Modern Unix `ping`
+      grc # Colour terminal output
       neofetch
       nixpkgs-fmt
+      procs # Modern Unix `ps`
       python311
       python311Packages.pip
       python311Packages.pipx
       python311Packages.virtualenv
+      ripgrep # Modern Unix `grep`
+      tldr # Modern Unix `man`
       wget2
       (pkgs.nerdfonts.override { fonts = [ "Hack" "UbuntuMono" "FiraCode" ]; })
     ];
