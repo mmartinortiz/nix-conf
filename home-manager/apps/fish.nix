@@ -18,13 +18,18 @@
       diff = "diffr";
       glow = "glow --pager";
       ip = "ip --color --brief";
-      ls = "exa --all --group-directories-first --icons";
+      ls = "exa --group-directories-first --icons";
       ll = "exa --long --git --group-directories-first --icons";
       lt = "exa --tree --group-directories-first --icons";
       less = "bat --paging=always";
       more = "bat --paging=always";
       tree = "exa --tree --group-directories-first";
       wget = "wget2";
+    };
+    shellAbbrs = {
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
       (builtins.readFile ./config.fish)
