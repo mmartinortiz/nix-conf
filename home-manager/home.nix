@@ -6,11 +6,6 @@
       enable = true;
       icons = true;
     };
-    dircolors = {
-      enable = true;
-      enableBashIntegration = true;
-      enableFishIntegration = true;
-    };
     bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [
