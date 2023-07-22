@@ -25,6 +25,9 @@ set -g fish_color_status red
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
+# Customize "pure" colors
+set -g pure_color_current_directory brcyan
+set -g pure_color_mute yellow
 
 fish_add_path ~/.local/bin
 
