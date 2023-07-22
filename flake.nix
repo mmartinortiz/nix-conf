@@ -1,14 +1,20 @@
 {
   description = "My Home Manager flake";
 
-  inputs = {
-    systems.url = "github:nix-systems/x86_64-linux";
-    nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
-    flake-utils.url = "github:numtide/flake-utils";
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    flake-utils.inputs.systems.follows = "systems";
-  };
+  inputs =
+    {
+      # systems.url = "github:nix-systems/x86_64-linux";
+      nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
+      flake-utils = {
+        url = "github:numtide/flake-utils";
+        # inputs.systems.follows = "systems";
+      };
+      home-manager =
+        {
+          url = "github:nix-community/home-manager/release-23.05";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
 
   outputs =
     { nixpkgs
