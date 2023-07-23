@@ -56,7 +56,6 @@
       glow # Terminal Markdown renderer
       gping # Modern Unix `ping`
       grc # Colour terminal output
-      neofetch
       nixpkgs-fmt
       procs # Modern Unix `ps`
       python311
