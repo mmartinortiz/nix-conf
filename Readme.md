@@ -134,3 +134,4 @@ error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0sw
 - [ ] Arduino IDE
 - [ ] Profiles per computer
 - [ ] Try a desktop (Can I change the desktop on Ubuntu via Home Manager?)
+- [ ] Can this be reused for different usernames?
