@@ -6,11 +6,11 @@
   # Probably there is already a '.bashrc' file that will make the flake give you and
   # error/warning. If bash is not going to be used, move it to '.bashrc.backup' and
   # fish will take over your "default shell"
-  home.file.".bashrc" = lib.mkIf config.programs.fish.enable {
-    text = ''
-      exec ${config.programs.fish.package}/bin/fish
-    '';
-  };
+  # home.file.".bashrc" = lib.mkIf config.programs.fish.enable {
+  #   text = ''
+  #     exec ${config.programs.fish.package}/bin/fish
+  #   '';
+  # };
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -28,7 +28,7 @@
     };
     shellAbbrs = {
       ga = "git add";
-      gc = "git commit";
+      gc = "git commit -m ";
       gp = "git push";
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
     };
