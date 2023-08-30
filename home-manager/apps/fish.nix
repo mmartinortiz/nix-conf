@@ -20,6 +20,7 @@
       ip = "ip --color --brief";
       ls = "exa --group-directories-first --icons";
       ll = "exa --long --git --group-directories-first --icons";
+      la = "exa --all --long --git --group-directories-first --icons";
       lt = "exa --tree --group-directories-first --icons";
       less = "bat --paging=always";
       more = "bat --paging=always";
