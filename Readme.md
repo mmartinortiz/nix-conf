@@ -110,6 +110,15 @@ error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0sw
     got:     sha256-f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo= # Use this one.
 ```
 
+## An specific environment for Python
+
+If you create a Python virtual environment using the `pip` command installed by Home Manager, it will fail to compile some Python packages, like Numpy or iPython, that require of `libstdc`. One solution is to install those packages via Nix.
+
+But if you need/want to use a Virtual Environment in you Python project, you have then two options:
+
+1. When creating the virtual environment for the Python project, use the system's Python interpreter instead of the Nix's Python interpreter.
+2. Start a `nix-shell` that mounts the "host" file system to the shell. There is an example in `python-shell.nix` that can be run with `nix-shell python-shell.nix`.
+
 ## Resources
 
 - [A list of new-ish command line tools](<https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/>)
