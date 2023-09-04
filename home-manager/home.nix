@@ -58,10 +58,6 @@
       grc # Colour terminal output
       nixpkgs-fmt
       procs # Modern Unix `ps`
-      python311
-      python311Packages.pip
-      python311Packages.pipx
-      python311Packages.virtualenv
       ripgrep # Modern Unix `grep`
       tldr # Modern Unix `man`
       wget2
