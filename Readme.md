@@ -10,6 +10,7 @@ Repository containing my `dotfiles` configuration, managed via [home manager](<h
     - [Activate the configuration](#activate-the-configuration)
   - [How to's](#how-tos)
     - [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
+  - [An specific environment for Python](#an-specific-environment-for-python)
   - [Resources](#resources)
   - [TODOs](#todos)
 
@@ -41,6 +42,7 @@ The home manager configuration of this repository includes tools like:
 - [glow](<https://github.com/charmbracelet/glow>): Render markdown on the CLI.
 - [gping](<https://github.com/orf/gping>): Ping, but with a graph.
 - [grc](<https://github.com/garabik/grc>): Generic colouriser.
+- [neovim](<https://neovim.io/>): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](<https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix>)
 - [nixpkgs-fmt](<https://nix-community.github.io/nixpkgs-fmt/>): Nix code formatter for nixpkgs.
 - [procs](<https://github.com/dalance/procs>): A modern replacement for ps written in Rust.
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
@@ -80,10 +82,10 @@ This configuration uses the [fish shell](<https://fishshell.com/>) as main shell
 mv ~/.bashrc ~/.bashrc.backup
 
 # From the 'nix-conf' folder
-nix run nixpkgs#home-manger -- switch --flake .
+nix run nixpkgs#home-manager -- switch --flake .
 
 # Alternatively
-nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
+nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/
 ```
 
 ## How to's

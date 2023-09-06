@@ -34,6 +34,7 @@
     ./apps/fish.nix
     ./apps/micro.nix
     ./apps/vim.nix
+    ./editors/neovim
   ];
   home = {
     # Home Manager needs a bit of information about you and the paths it should manage:
