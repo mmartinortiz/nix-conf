@@ -2,9 +2,15 @@
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
-    exa = {
+    eza = {
       enable = true;
       icons = true;
+      git = true;
+      extraOptions = [
+        "--hyperlink"
+        "--group-directories-first"
+        "--header"
+      ];
     };
     bat = {
       enable = true;

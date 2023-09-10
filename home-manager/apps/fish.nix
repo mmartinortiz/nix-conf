@@ -18,10 +18,10 @@
       diff = "diffr";
       glow = "glow --pager";
       ip = "ip --color --brief";
-      ls = "exa --group-directories-first --icons";
-      ll = "exa --long --git --group-directories-first --icons";
-      la = "exa --all --long --git --group-directories-first --icons";
-      lt = "exa --tree --group-directories-first --icons";
+      ls = "eza";
+      ll = "eza --long";
+      la = "eza --all --long";
+      lt = "eza --tree";
       less = "bat --paging=always";
       more = "bat --paging=always";
       tree = "exa --tree --group-directories-first";
