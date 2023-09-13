@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ inputs, config, pkgs, ... }: {
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
@@ -38,8 +38,8 @@
     # Example of application configuration.
     # Note that 'micro' does not need to be indicated bellow, under the packages section
     ./apps/fish.nix
-    ./apps/micro.nix
-    ./apps/vim.nix
+    # ./apps/micro.nix
+    # ./apps/vim.nix
     ./editors/neovim
   ];
   home = {
