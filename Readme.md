@@ -121,6 +121,18 @@ But if you need/want to use a Virtual Environment in you Python project, you hav
 1. When creating the virtual environment for the Python project, use the system's Python interpreter instead of the Nix's Python interpreter.
 2. Start a `nix-shell` that mounts the "host" file system to the shell. There is an example in `python-shell.nix` that can be run with `nix-shell python-shell.nix`.
 
+## NeoVim
+
+Some of the things it brings:
+
+- LSP for Python with Pyright
+
+Some things to be done:
+
+- [ ] Tree browser
+- [ ] Key bindings for autocompletion
+
+
 ## Resources
 
 - [A list of new-ish command line tools](<https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/>)
