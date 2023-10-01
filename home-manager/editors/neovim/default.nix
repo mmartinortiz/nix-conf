@@ -1,7 +1,4 @@
 { inputs, pkgs, ... }: {
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-  ];
   programs.nixvim = {
     enable = true;
     viAlias = true;
@@ -11,8 +8,13 @@
       number = true;
     };
 
-    colorschemes = {
-      gruvbox.enable = true;
+    extraPackages = [
+      pkgs.pyright
+    ];
+
+    colorschemes.catppuccin = {
+      enable = true;
+      flavour = "mocha";
     };
 
     plugins = {
@@ -31,34 +33,34 @@
       neo-tree.enable = true;
       bufferline.enable = true;
       indent-blankline.enable = true;
-      # lualine = {
-      #   enable = true;
-      #   theme = "gruvbox-material";
-      # };
+      lualine = {
+        enable = true;
+        theme = "gruvbox-material";
+      };
       commentary.enable = true;
       lsp = {
         enable = true;
         servers = {
-          # More servers are
+          # More servers at
           # https://nix-community.github.io/nixvim/plugins/lsp/servers
           nil_ls.enable = true;
           jsonls.enable = true;
-          # pyright.enable = true;
+          pyright.enable = true;
           ruff-lsp.enable = true;
           yamlls.enable = true;
         };
       };
       luasnip.enable = true;
-      # nvim-cmp = {
-      #   enable = true;
-      #   autoEnableSources = true;
-      #   sources = [{ name = "nvim_lsp"; }];
-      #   snippet.expand = "luasnip";
-      #   mappingPresets = [ "insert" ];
-      #   mapping = {
-      #     "<CR>" = "cmp.mapping.confirm({ select = true })";
-      #   };
-      # };
+      nvim-cmp = {
+        enable = true;
+        autoEnableSources = true;
+        sources = [{ name = "nvim_lsp"; }];
+        snippet.expand = "luasnip";
+        mappingPresets = [ "insert" ];
+        mapping = {
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+        };
+      };
     };
   };
 }
