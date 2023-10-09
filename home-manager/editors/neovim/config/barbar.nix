@@ -1,58 +1,31 @@
-{ lib, pkgs, config, ... }:
-with lib;
-let
-  cfg = config.programs.nixvim.plugins.barbar;
-in
-{
-  options.programs.nixvim.plugins.barbar = {
-    enable = mkEnableOption "Enable barbar.nvim";
+{ pkgs, ... }: {
+  programs.nixvim = {
+    plugins.barbar = {
+      enable = true;
+      animation = true;
+      keymaps = {
+        # Reordering tabs
+        moveNext = "<m-s-j>";
+        movePrevious = "<m-s-k>";
+        pin = "<m-p>";
 
-    animations = mkOption {
-      type = types.nullOr types.bool;
-      default = null;
-      description = "Enable animations";
+        # Navigating tabs
+        next = "<m-j>";
+        previous = "<m-k>";
+        goTo1 = "<m-1>";
+        goTo2 = "<m-2>";
+        goTo3 = "<m-3>";
+        goTo4 = "<m-4>";
+        goTo5 = "<m-5>";
+        goTo6 = "<m-6>";
+        goTo7 = "<m-7>";
+        goTo8 = "<m-8>";
+        goTo9 = "<m-9>";
+        last = "<m-0>";
+
+        # Close tab
+        close = "<m-x>";
+      };
     };
-
-    autoHide = mkOption {
-      type = types.nullOr types.bool;
-      default = null;
-      description = "Auto-hide the tab bar when there is only one buffer";
-    };
-
-    closeable = mkOption {
-      type = types.nullOr types.bool;
-      default = null;
-      description = "Enable the close button";
-    };
-
-    icons = mkOption {
-      type = with types; nullOr (oneOf [bool (enum ["numbers both"])]);
-      default = null;
-      description = "Enable/disable icons";
-    };
-
-    iconCustomColors = mkOption {
-      type = with types; nullOr (oneOf [bool str]);
-      default = null;
-      description = "Sets the icon highlight group";
-    };
-
-    # Keybinds concept:
-    # keys = {
-    #   previousBuffer = mkBindDef "normal" "Previous buffer" { action = ":BufferPrevious<CR>"; silent = true; } "<A-,>";
-    #   nextBuffer = mkBindDef "normal" "Next buffer" { action = ":BufferNext<CR>"; silent = true; } "<A-.>";
-    #   movePrevious = mkBindDef "normal" "Re-order to previous" { action = ":BufferMovePrevious<CR>"; silent = true; } "<A-<>";
-    #   moveNext = mkBindDef "normal" "Re-order to next" { action = ":BufferMoveNext<CR>"; silent = true; } "<A->>";
-
-    #   # TODO all the other ones.....
-    # };
-  };
-
-  config.programs.nixvim = mkIf cfg.enable {
-    extraPlugins = with pkgs.vimPlugins; [
-      barbar-nvim nvim-web-devicons
-    ];
-
-    # maps = genMaps cfg.keys;
   };
 }
