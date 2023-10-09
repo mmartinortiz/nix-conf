@@ -130,8 +130,27 @@ Some of the things it brings:
 Some things to be done:
 
 - [ ] Tree browser
-- [ ] Key bindings for autocompletion
+- [x] Key bindings for autocompletion
+- [x] Key bindings for commenting code
+- [x] Jump to last edited line
 
+Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)
+
+```
+# Comments
+<C-/>  # Toggle comments
+
+# Treesitter
+# By default, the leader key is \
+<leader>ff   # Telescope find_files
+<leader>fg   # Telescope live_grep
+<leader>fb   # Telescope buffers
+<leader>fh   # Telescope help_tags
+<leader>fk   # Telescope keymaps
+<leader>fp   # Telescope commands
+
+# More on https://github.com/nvim-telescope/telescope.nvim#default-mappings
+```
 
 ## Resources
 
