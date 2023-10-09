@@ -1,7 +1,5 @@
-{
-  pkgs,
-  config,
-  ...
+{ pkgs
+, ...
 }: {
   programs.nixvim = {
     # maps.normal = { };

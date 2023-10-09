@@ -1,4 +1,11 @@
-{ inputs, pkgs, ... }: {
+{ pkgs, ... }: {
+  imports = [
+    ./config/barbar.nix
+    ./config/comment.nix
+    ./config/gitsigns.nix
+    ./config/telescope.nix
+  ];
+
   programs.nixvim = {
     enable = true;
     viAlias = true;
@@ -18,14 +25,10 @@
     };
 
     plugins = {
+      lastplace.enable = true;
       lightline.enable = true;
       nix.enable = true;
       treesitter.enable = true;
-      telescope = {
-        enable = true;
-        extensions.fzf-native.enable = true;
-        extensions.fzf-native.fuzzy = true;
-      };
       nvim-autopairs = {
         enable = true;
         checkTs = true;
@@ -61,7 +64,7 @@
           # `Enter` key to confirm completion
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           # Ctrl+Space to trigger completion menu
-	  "<C-Space>" = "cmp.mapping.complete()";
+          "<C-Space>" = "cmp.mapping.complete()";
           # Navigate between snippet placeholder
           "<Tab>" = "
                 cmp.mapping(function(fallback)
