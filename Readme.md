@@ -126,6 +126,7 @@ But if you need/want to use a Virtual Environment in you Python project, you hav
 Some of the things it brings:
 
 - LSP for Python with Pyright
+- CMP: A completion plugin
 
 Some things to be done:
 
@@ -133,21 +134,29 @@ Some things to be done:
 - [x] Key bindings for autocompletion
 - [x] Key bindings for commenting code
 - [x] Jump to last edited line
+- [ ] Which key plugin
 
 Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)
 
 ```
+# By default, the leader key is \
+
 # ToggleTerm - Normal mode
 <leader>tf  # Floating terminal
 <ledaer>th  # Horizontal terminal
 <leader>tv  # Vertical terminal
 <C-\>       # Toggle terminal (default direction)
 
-# Comments
+# Comments - Normal and Visual Mode
 <C-/>  # Toggle comments
 
+# Completion - Insert Mode
+<C-Space>  # Trigger completion
+<CR>       # Accept completion
+<C-j>      # Move up on completion list
+<C-k>      # Move down on completion list
+
 # Treesitter
-# By default, the leader key is \
 <leader>ff   # Telescope find_files
 <leader>fg   # Telescope live_grep
 <leader>fb   # Telescope buffers

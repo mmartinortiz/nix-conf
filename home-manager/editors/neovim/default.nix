@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./config/barbar.nix
-    ./config/comment.nix
     ./config/gitsigns.nix
     ./config/telescope.nix
   ];
@@ -26,6 +25,7 @@
 
     maps = {
       normal = {
+        # ToggleTerm
         "<leader>tf" = {
           action = "<cmd>ToggleTerm direction=float<cr>";
           silent = true;
@@ -46,10 +46,27 @@
           silent = true;
           desc = "Toggle terminal";
         };
+
+        # Comment
+        # Neovim seems to register <C-/> as <C-_>
+        "<c-_>" = {
+          action = "<Plug>(comment_toggle_linewise_current)";
+          desc = "Comment line";
+        };
+      };
+
+      visual = {
+        # Comment
+        # Neovim seems to register <C-/> as <C-_>
+        "<c-_>" = {
+          action = "<Plug>(comment_toggle_linewise_visual)";
+          desc = "Comment line/block";
+        };
       };
     };
 
     plugins = {
+      comment-nvim.enable = true;
       lastplace.enable = true;
       lightline.enable = true;
       nix.enable = true;
@@ -95,7 +112,7 @@
           # Ctrl+Space to trigger completion menu
           "<C-Space>" = "cmp.mapping.complete()";
           # Navigate between snippet placeholder
-          "<Tab>" = "
+          "<C-j>" = "
                 cmp.mapping(function(fallback)
                   if cmp.visible() then
                           cmp.select_next_item()
@@ -111,7 +128,7 @@
                   's',
                 })";
 
-          "<S-Tab>" = "
+          "<C-k>" = "
                 cmp.mapping(function()
                   if cmp.visible() then
                           cmp.select_prev_item()
