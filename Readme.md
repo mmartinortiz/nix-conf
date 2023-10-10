@@ -137,6 +137,12 @@ Some things to be done:
 Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)
 
 ```
+# ToggleTerm - Normal mode
+<leader>tf  # Floating terminal
+<ledaer>th  # Horizontal terminal
+<leader>tv  # Vertical terminal
+<C-\>       # Toggle terminal (default direction)
+
 # Comments
 <C-/>  # Toggle comments
 
