@@ -136,7 +136,7 @@ Some of the things it brings:
 
 Some things to be done:
 
-- [ ] Tree browser (NeoTree), add key bindings
+- [x] Tree browser (NeoTree), add key bindings
 - [x] Key bindings for autocompletion
 - [x] Key bindings for commenting code
 - [x] Jump to last edited line
@@ -162,7 +162,7 @@ Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intr
 <C-j>      # Move up on completion list
 <C-k>      # Move down on completion list
 
-# Treesitter
+# Telescope
 <leader>ff   # Telescope find_files
 <leader>fg   # Telescope live_grep
 <leader>fb   # Telescope buffers
@@ -185,6 +185,9 @@ Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intr
 
 # Barbar. Close tab
 <m-x>  # Close tab
+
+# Neotree
+<C-b>  # Toggle Neotree visibility
 ```
 
 ## Resources

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   programs.nixvim = {
     maps = {
       normal = {
@@ -30,12 +30,18 @@
           action = "<Plug>(comment_toggle_linewise_current)";
           desc = "Comment line";
         };
+
+        # NeoTree
+        "<C-b>" = {
+          action = "<cmd>Neotree toggle<cr>";
+          desc = "Toggle Neotree visibility";
+        };
       };
 
       visual = {
         # Comment
         # Neovim seems to register <C-/> as <C-_>
-        "<c-_>" = {
+        "<C-_>" = {
           action = "<Plug>(comment_toggle_linewise_visual)";
           desc = "Comment line/block";
         };
