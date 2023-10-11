@@ -125,12 +125,18 @@ But if you need/want to use a Virtual Environment in you Python project, you hav
 
 Some of the things it brings:
 
-- LSP for Python with Pyright
-- CMP: A completion plugin
+- LSP for Python with Pyright, CMP (completion plugin) and [treesitter](https://github.com/tree-sitter/tree-sitter).
+- [BarBar](https://github.com/romgrk/barbar.nvim): The neovim tabline plugin.
+- [LuaLine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+- [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by lua.
+- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim): A neovim lua plugin to help easily manage multiple terminal windows.
+- [NeoTree](https://github.com/nvim-neo-tree/neo-tree.nvim): Neovim plugin to manage the file system and other tree like structures.
+- [GitSigns](https://github.com/lewis6991/gitsigns.nvim): Git integration for buffers.
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. Files and more.
 
 Some things to be done:
 
-- [ ] Tree browser
+- [ ] Tree browser (NeoTree), add key bindings
 - [x] Key bindings for autocompletion
 - [x] Key bindings for commenting code
 - [x] Jump to last edited line
