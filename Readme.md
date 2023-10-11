@@ -3,16 +3,16 @@
 Repository containing my `dotfiles` configuration, managed via [home manager](<https://nix-community.github.io/home-manager/index.html>). The original intention is not to configure a full NixOS system, but my daily machine, which runs Ubuntu. In the future I may try to use NixOS as daily computer system.
 
 - [My Nix configuration](#my-nix-configuration)
-  - [Overview](#overview)
-  - [Install](#install)
-    - [Dependencies](#dependencies)
-    - [Install Nix](#install-nix)
-    - [Activate the configuration](#activate-the-configuration)
-  - [How to's](#how-tos)
-    - [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
-  - [An specific environment for Python](#an-specific-environment-for-python)
-  - [Resources](#resources)
-  - [TODOs](#todos)
+- [Overview](#overview)
+- [Install](#install)
+- [Dependencies](#dependencies)
+- [Install Nix](#install-nix)
+- [Activate the configuration](#activate-the-configuration)
+- [How to's](#how-tos)
+- [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
+- [An specific environment for Python](#an-specific-environment-for-python)
+- [Resources](#resources)
+- [TODOs](#todos)
 
 ## Overview
 
@@ -29,15 +29,15 @@ The home manager configuration of this repository includes tools like:
 - [exa](<https://the.exa.website/>): A modern replacement for ls.
 - [fd](<https://github.com/sharkdp/fd>): A simple, fast and user-friendly alternative to 'find'.
 - [fish shell](<https://fishshell.com>): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish).
-  - With [aliases](<https://fishshell.com/docs/current/cmds/alias.html>) for cat, diff, etc...
-  - With [abbreviations](<https://fishshell.com/docs/current/cmds/abbr.html>) for git
-  - The [grc](<https://github.com/oh-my-fish/plugin-grc>) plugin. `grc` Colourizer for some commands.
-  - [pure](<https://github.com/pure-fish/pure>) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
-  - [colored-man-pages](<https://github.com/PatrickF1/colored_man_pages.fish>) plugin. Fish shell plugin to colorize man pages.
-  - [bass](<https://github.com/edc/bass>). Make Bash utilities usable in Fish shell.
-  - [sponge](<https://github.com/meaningful-ooo/sponge>) plugin. Clean fish history from typos automatically.
-  - [pisces](<https://github.com/laughedelic/pisces>) plugin. Helps you to work with paired symbols in the command line.
-  - [autovenv](<https://github.com/mmartinortiz/fish-autovenv>) plugin. Enable Python environments automatically.
+- With [aliases](<https://fishshell.com/docs/current/cmds/alias.html>) for cat, diff, etc...
+- With [abbreviations](<https://fishshell.com/docs/current/cmds/abbr.html>) for git
+- The [grc](<https://github.com/oh-my-fish/plugin-grc>) plugin. `grc` Colourizer for some commands.
+- [pure](<https://github.com/pure-fish/pure>) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
+- [colored-man-pages](<https://github.com/PatrickF1/colored_man_pages.fish>) plugin. Fish shell plugin to colorize man pages.
+- [bass](<https://github.com/edc/bass>). Make Bash utilities usable in Fish shell.
+- [sponge](<https://github.com/meaningful-ooo/sponge>) plugin. Clean fish history from typos automatically.
+- [pisces](<https://github.com/laughedelic/pisces>) plugin. Helps you to work with paired symbols in the command line.
+- [autovenv](<https://github.com/mmartinortiz/fish-autovenv>) plugin. Enable Python environments automatically.
 - git: By now you should now what this is.
 - [glow](<https://github.com/charmbracelet/glow>): Render markdown on the CLI.
 - [gping](<https://github.com/orf/gping>): Ping, but with a graph.
@@ -96,20 +96,20 @@ Despite what says [here](<https://github.com/NixOS/nixpkgs/issues/191128>) or [h
 
 ```nix
 {
-  name = "fish-autovenv";
-  src = pkgs.fetchFromGitHub {
-    owner = "mmartinortiz";
-    repo = "fish-autovenv";
-    rev = "1.0.0";
-    sha256 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-  };
+name = "fish-autovenv";
+src = pkgs.fetchFromGitHub {
+owner = "mmartinortiz";
+repo = "fish-autovenv";
+rev = "1.0.0";
+sha256 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+};
 }
 ```
 
 ```bash
 error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0swsvgvzsc6wkfk-source.drv':
-  specified: sha256-zBB5Ow4FfzhM8QXRT0E174ZHessf1OU57K8co+ReuFw=
-    got:     sha256-f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo= # Use this one.
+specified: sha256-zBB5Ow4FfzhM8QXRT0E174ZHessf1OU57K8co+ReuFw=
+got:     sha256-f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo= # Use this one.
 ```
 
 ## An specific environment for Python
@@ -120,6 +120,75 @@ But if you need/want to use a Virtual Environment in you Python project, you hav
 
 1. When creating the virtual environment for the Python project, use the system's Python interpreter instead of the Nix's Python interpreter.
 2. Start a `nix-shell` that mounts the "host" file system to the shell. There is an example in `python-shell.nix` that can be run with `nix-shell python-shell.nix`.
+
+## NeoVim
+
+Some of the things it brings:
+
+- LSP for Python with Pyright, CMP (completion plugin) and [treesitter](https://github.com/tree-sitter/tree-sitter).
+- [BarBar](https://github.com/romgrk/barbar.nvim): The neovim tabline plugin.
+- [LuaLine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+- [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by lua.
+- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim): A neovim lua plugin to help easily manage multiple terminal windows.
+- [NeoTree](https://github.com/nvim-neo-tree/neo-tree.nvim): Neovim plugin to manage the file system and other tree like structures.
+- [GitSigns](https://github.com/lewis6991/gitsigns.nvim): Git integration for buffers.
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. Files and more.
+
+Some things to be done:
+
+- [x] Tree browser (NeoTree), add key bindings
+- [x] Key bindings for autocompletion
+- [x] Key bindings for commenting code
+- [x] Jump to last edited line
+- [ ] Which key plugin
+
+Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)
+
+```
+# By default, the leader key is \
+
+# ToggleTerm - Normal mode
+<leader>tf  # Floating terminal
+<ledaer>th  # Horizontal terminal
+<leader>tv  # Vertical terminal
+<C-\>       # Toggle terminal (default direction)
+
+# Comments - Normal and Visual Mode
+<C-/>  # Toggle comments
+
+# Completion - Insert Mode
+<C-Space>  # Trigger completion
+<CR>       # Accept completion
+<C-j>      # Move up on completion list
+<C-k>      # Move down on completion list
+
+# Telescope
+<leader>ff   # Telescope find_files
+<leader>fg   # Telescope live_grep
+<leader>fb   # Telescope buffers
+<leader>fh   # Telescope help_tags
+<leader>fk   # Telescope keymaps
+<leader>fp   # Telescope commands
+
+# More on https://github.com/nvim-telescope/telescope.nvim#default-mappings
+
+# Barbar. Reordering tabs
+<m-s-j>  # Move next tab
+<m-s-k>  # Move previous tab
+<m-p>    # Pin tab
+
+# Barbar. Navigating tabs
+<m-j>  # Move to next tab
+<m-k>  # Move to previous tab
+<m-X>  # Move to X tab (from 1 to 9)
+<m-0>  # Move to last tab
+
+# Barbar. Close tab
+<m-x>  # Close tab
+
+# Neotree
+<C-b>  # Toggle Neotree visibility
+```
 
 ## Resources
 
@@ -139,9 +208,9 @@ But if you need/want to use a Virtual Environment in you Python project, you hav
 - [ ] Install Go
 - [ ] Install Rust
 - [ ] Python programs, via `pipx`?
-  - [ ] ipython
-  - [ ] mu-editor
-  - [ ] esptool
+- [ ] ipython
+- [ ] mu-editor
+- [ ] esptool
 - [ ] Arduino IDE
 - [ ] Profiles per computer
 - [ ] Try a desktop (Can I change the desktop on Ubuntu via Home Manager?)

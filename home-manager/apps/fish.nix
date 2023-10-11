@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   # fish cannot be set as the default shell of the user because fish shell is not
@@ -29,7 +29,7 @@
     };
     shellAbbrs = {
       ga = "git add";
-      gc = "git commit -m ";
+      gc = "git commit -m";
       gp = "git push";
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
     };
@@ -37,7 +37,7 @@
       (builtins.readFile ./config.fish)
       "set -g SHELL ${pkgs.fish}/bin/fish"
     ]));
-    plugins = with pkgs.fishPlugins; [
+    plugins = [
       { name = "grc"; src = pkgs.fishPlugins.grc.src; }
       { name = "pure"; src = pkgs.fishPlugins.pure.src; }
       { name = "colored-man-pages"; src = pkgs.fishPlugins.colored-man-pages.src; }

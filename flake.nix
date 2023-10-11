@@ -14,14 +14,21 @@
           url = "github:nix-community/home-manager";
           inputs.nixpkgs.follows = "nixpkgs";
         };
+      nixvim = {
+        url = "github:nix-community/nixvim";
+        # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+        # url = "github:nix-community/nixvim/nixos-23.05";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
   outputs =
     { nixpkgs
     , flake-utils
     , home-manager
+    , nixvim
     , ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -31,6 +38,7 @@
         manolo = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
+            nixvim.homeManagerModules.nixvim
             ./home-manager/home.nix
           ];
         };
