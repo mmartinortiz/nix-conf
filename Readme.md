@@ -48,7 +48,6 @@ The home manager configuration of this repository includes tools like:
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
 - [ripgrep](<https://github.com/BurntSushi/ripgrep>): recursively searches directories for a regex pattern while respecting your gitignore.
 - [tldr](<https://tldr.sh/>): Collaborative cheat-sheets for console commands.
-- [vim](<https://www.vim.org/>): The ubiquitous text editor.
 - [wget2](<https://gitlab.com/gnuwget/wget2>): The successor of GNU Wget.
 - Fonts: [Hack](<https://sourcefoundry.org/hack/>), [Ubuntu Mono](<https://design.ubuntu.com/font>) and [FiraCode](<https://github.com/tonsky/FiraCode>).
 
