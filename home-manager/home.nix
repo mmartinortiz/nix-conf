@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ pkgs, ... }: {
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
@@ -39,8 +39,7 @@
     # Note that 'micro' does not need to be indicated bellow, under the packages section
     ./apps/fish.nix
     # ./apps/micro.nix
-    # ./apps/vim.nix
-    ./editors/neovim
+    ./apps/neovim
   ];
   home = {
     # Home Manager needs a bit of information about you and the paths it should manage:
@@ -72,9 +71,9 @@
     ];
 
     sessionVariables = {
-      EDITOR = "vim";
-      SYSTEMD_EDITOR = "vim";
-      VISUAL = "vim";
+      EDITOR = "nvim";
+      SYSTEMD_EDITOR = "nvim";
+      VISUAL = "nvim";
     };
 
   };
