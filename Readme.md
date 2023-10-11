@@ -136,10 +136,6 @@ Some of the things it brings:
 
 Some things to be done:
 
-- [x] Tree browser (NeoTree), add key bindings
-- [x] Key bindings for autocompletion
-- [x] Key bindings for commenting code
-- [x] Jump to last edited line
 - [ ] Which key plugin
 
 Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)

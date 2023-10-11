@@ -2,43 +2,16 @@
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
-    eza = {
-      enable = true;
-      icons = true;
-      git = true;
-      extraOptions = [
-        "--hyperlink"
-        "--group-directories-first"
-        "--header"
-      ];
-    };
-    bat = {
-      enable = true;
-      extraPackages = with pkgs.bat-extras; [
-        batwatch
-        prettybat
-      ];
-    };
-    git = {
-      enable = true;
-      userName = "manolo";
-      userEmail = "mmartinortiz@gmail.com";
-    };
-    direnv = {
-      # Note, enabling the direnv module will always active its functionality for Fish
-      # since the direnv package automatically gets loaded in Fish
-      enable = true;
-      enableBashIntegration = true;
-      nix-direnv = {
-        enable = true;
-      };
-    };
   };
   imports = [
     # Example of application configuration.
     # Note that 'micro' does not need to be indicated bellow, under the packages section
-    ./apps/fish.nix
-    # ./apps/micro.nix
+    ./apps/bat.nix
+    ./apps/direnv.nix
+    ./apps/eza.nix
+    ./apps/fish
+    ./apps/git.nix
+    ./apps/micro.nix
     ./apps/neovim
   ];
   home = {
