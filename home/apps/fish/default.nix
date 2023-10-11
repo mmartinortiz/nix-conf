@@ -34,7 +34,7 @@
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
-      (builtins.readFile ./config.fish)
+      (builtins.readFile ./config/config.fish)
       "set -g SHELL ${pkgs.fish}/bin/fish"
     ]));
     plugins = [
