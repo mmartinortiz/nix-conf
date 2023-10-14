@@ -16,18 +16,45 @@
         silent = true;
         diagnostic = {
           # Navigate in diagnostics
-          "<leader>k" = "goto_prev";
-          "<leader>j" = "goto_next";
+          "<leader>k" = {
+            action = "goto_prev";
+            desc = "Go to previous warning/error";
+          };
+          "<leader>j" = {
+            action = "goto_next";
+            desc = "Go to next warning/error";
+          };
         };
 
         lspBuf = {
-          "<leader>ld" = "definition";
-          "<leader>lr" = "references";
-          "<leader>rt" = "type_definition";
-          "<leader>ri" = "implementation";
-          e = "hover";
-          "<leader>lrn" = "rename";
-          "<leader>lf" = "format";
+          "<leader>ld" = {
+            action = "definition";
+            desc = "Go to definition";
+          };
+          "<leader>lr" = {
+            action = "references";
+            desc = "Go to references";
+          };
+          "<leader>rt" = {
+            action = "type_definition";
+            desc = "Go to type definition";
+          };
+          "<leader>ri" = {
+            action = "implementation";
+            desc = "Go to implementation";
+          };
+          "<leader>e" = {
+            action = "hover";
+            desc = "Show hover information";
+          };
+          "<leader>lrn" = {
+            action = "rename";
+            desc = "Rename object";
+          };
+          "<leader>lf" = {
+            action = "format";
+            desc = "Format file";
+          };
         };
       };
     };

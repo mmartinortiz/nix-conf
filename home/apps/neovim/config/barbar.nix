@@ -5,13 +5,13 @@
       animation = true;
       keymaps = {
         # Reordering tabs
-        moveNext = "<m-s-j>";
-        movePrevious = "<m-s-k>";
+        moveNext = "<m-s-k>";
+        movePrevious = "<m-s-j>";
         pin = "<m-p>";
 
         # Navigating tabs
-        next = "<m-j>";
-        previous = "<m-k>";
+        next = "<m-k>";
+        previous = "<m-j>";
         goTo1 = "<m-1>";
         goTo2 = "<m-2>";
         goTo3 = "<m-3>";

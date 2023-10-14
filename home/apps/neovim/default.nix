@@ -57,6 +57,10 @@
           enable = true;
           direction = "horizontal";
         };
+
+        which-key = {
+          enable = true;
+        };
       };
     };
   };

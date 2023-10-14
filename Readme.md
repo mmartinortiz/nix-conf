@@ -150,7 +150,7 @@ Keyboard mappings. More about notations, [here](https://neovim.io/doc/user/intro
 <leader>ri  # Go to implementation
 <leader>lrn # Rename
 <leader>lf  # Format file
-e           # Show hover information
+<leader>e   # Show hover information
 
 # ToggleTerm - Normal mode
 <leader>tf  # Floating terminal
@@ -178,15 +178,13 @@ e           # Show hover information
 # More on https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
 # Barbar. Reordering tabs
-<m-s-j>  # Move next tab
-<m-s-k>  # Move previous tab
+<m-s-k>  # Move tab to right
+<m-s-j>  # Move tab to left
 <m-p>    # Pin tab
 
 # Barbar. Navigating tabs
-<m-j>  # Move to next tab
-<m-k>  # Move to previous tab
-<m-X>  # Move to X tab (from 1 to 9)
-<m-0>  # Move to last tab
+<m-k>  # Move to next tab
+<m-j>  # Move to previous tab
 
 # Barbar. Close tab
 <m-x>  # Close tab
