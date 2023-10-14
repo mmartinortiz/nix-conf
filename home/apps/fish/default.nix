@@ -1,6 +1,8 @@
-{ lib, pkgs, ... }:
-
 {
+  lib,
+  pkgs,
+  ...
+}: {
   # fish cannot be set as the default shell of the user because fish shell is not
   # accessible by chsh. One solution is to sneak the fish shell on bash.
   # Probably there is already a '.bashrc' file that will make the flake give you and
@@ -33,17 +35,35 @@
       gp = "git push";
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
     };
-    interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" ([
+    interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" [
       (builtins.readFile ./config/config.fish)
       "set -g SHELL ${pkgs.fish}/bin/fish"
-    ]));
+    ]);
     plugins = [
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-      { name = "pure"; src = pkgs.fishPlugins.pure.src; }
-      { name = "colored-man-pages"; src = pkgs.fishPlugins.colored-man-pages.src; }
-      { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
-      { name = "bass"; src = pkgs.fishPlugins.bass.src; }
-      { name = "pisces"; src = pkgs.fishPlugins.pisces.src; }
+      {
+        name = "grc";
+        src = pkgs.fishPlugins.grc.src;
+      }
+      {
+        name = "pure";
+        src = pkgs.fishPlugins.pure.src;
+      }
+      {
+        name = "colored-man-pages";
+        src = pkgs.fishPlugins.colored-man-pages.src;
+      }
+      {
+        name = "sponge";
+        src = pkgs.fishPlugins.sponge.src;
+      }
+      {
+        name = "bass";
+        src = pkgs.fishPlugins.bass.src;
+      }
+      {
+        name = "pisces";
+        src = pkgs.fishPlugins.pisces.src;
+      }
       {
         name = "fish-autovenv";
         src = pkgs.fetchFromGitHub {
@@ -54,14 +74,13 @@
         };
       }
     ];
-    functions =
-      {
-        __fish_command_not_found_handler = {
-          body = "__fish_default_command_not_found_handler $argv[1]";
-          onEvent = "fish_command_not_found";
-        };
-
-        gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+    functions = {
+      __fish_command_not_found_handler = {
+        body = "__fish_default_command_not_found_handler $argv[1]";
+        onEvent = "fish_command_not_found";
       };
+
+      gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+    };
   };
 }

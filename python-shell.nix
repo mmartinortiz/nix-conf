@@ -5,7 +5,7 @@
 #
 # Run with 'nix-shell python-shell.nix'
 #
-{ pkgs ? import <nixpkgs> { } }:
+{pkgs ? import <nixpkgs> {}}:
 (pkgs.buildFHSUserEnv {
   name = "pipzone";
   targetPkgs = kgs: (with pkgs; [
@@ -14,5 +14,5 @@
     python311Packages.virtualenv
   ]);
   runScript = "fish";
-}).env
-
+})
+.env

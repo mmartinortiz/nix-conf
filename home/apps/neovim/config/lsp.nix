@@ -1,5 +1,5 @@
 # Language Server Protocol
-{ ... }: {
+{...}: {
   programs.nixvim = {
     plugins.lsp = {
       enable = true;
@@ -12,6 +12,34 @@
         ruff-lsp.enable = true;
         yamlls.enable = true;
       };
+      keymaps = {
+        silent = true;
+        diagnostic = {
+          # Navigate in diagnostics
+          "<leader>k" = "goto_prev";
+          "<leader>j" = "goto_next";
+        };
+
+        lspBuf = {
+          "<leader>ld" = "definition";
+          "<leader>lr" = "references";
+          "<leader>rt" = "type_definition";
+          "<leader>ri" = "implementation";
+          e = "hover";
+          "<leader>lrn" = "rename";
+          "<leader>lf" = "format";
+        };
+      };
+    };
+    plugins.null-ls = {
+      enable = true;
+      sources = {
+        formatting = {
+          black.enable = true;
+          isort.enable = true;
+          alejandra.enable = true;
+        };
+      };
     };
 
     plugins.treesitter.enable = true;
@@ -19,9 +47,9 @@
     plugins.nvim-cmp = {
       enable = true;
       autoEnableSources = true;
-      sources = [{ name = "nvim_lsp"; }];
+      sources = [{name = "nvim_lsp";}];
       snippet.expand = "luasnip";
-      mappingPresets = [ "insert" ];
+      mappingPresets = ["insert"];
       mapping = {
         # `Enter` key to confirm completion
         "<CR>" = "cmp.mapping.confirm({ select = true })";
@@ -59,4 +87,3 @@
     };
   };
 }
- 
