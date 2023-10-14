@@ -141,6 +141,16 @@ Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intr
 
 ```
 # By default, the leader key is \
+# LSP Navigate in diagnostics
+<leader>k   # Go to next warning/error
+<leader>j   # Go to previous warning/error
+<leader>ld  # Go to definition
+<leader>lr  # Go to references
+<leader>rt  # Go to type definition
+<leader>ri  # Go to implementation
+<leader>lrn # Rename
+<leader>lf  # Format file
+e           # Show hover information
 
 # ToggleTerm - Normal mode
 <leader>tf  # Floating terminal
