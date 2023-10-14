@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Let Home Manager install and manage itself:
   programs = {
     home-manager.enable = true;
@@ -25,6 +25,7 @@
     # See the Home Manager release notes for a list of state version changes in each release.
     stateVersion = "23.05";
     packages = with pkgs; [
+      alejandra # Format Nix files
       chafa # Terminal image viewer
       deadnix
       diffr # Modern Unix `diff`
@@ -35,12 +36,11 @@
       glow # Terminal Markdown renderer
       gping # Modern Unix `ping`
       grc # Colour terminal output
-      nixpkgs-fmt
       procs # Modern Unix `ps`
       ripgrep # Modern Unix `grep`
       tldr # Modern Unix `man`
       wget2
-      (pkgs.nerdfonts.override { fonts = [ "Hack" "UbuntuMono" "FiraCode" ]; })
+      (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
     ];
 
     sessionVariables = {
@@ -48,7 +48,6 @@
       SYSTEMD_EDITOR = "nvim";
       VISUAL = "nvim";
     };
-
   };
   fonts.fontconfig.enable = true;
 }
