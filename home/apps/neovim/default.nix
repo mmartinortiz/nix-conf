@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./config/keyboard_mapping.nix
     ./config/barbar.nix
@@ -6,56 +6,57 @@
     ./config/telescope.nix
     ./config/lsp.nix
   ];
-
-  programs.nixvim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-
-    options = {
-      number = true;
-    };
-
-    extraPackages = [
-      pkgs.pyright
-    ];
-
-    colorschemes.catppuccin = {
+  programs = {
+    nixvim = {
       enable = true;
-      flavour = "mocha";
-    };
+      viAlias = true;
+      vimAlias = true;
 
-    plugins = {
-      # Comment visual blocks
-      comment-nvim.enable = true;
-
-      # indent-blankline.enable = true;
-
-      # Go to the last place visited on a file
-      lastplace.enable = true;
-
-      # An status bar
-      lualine = {
-        enable = true;
-        theme = "gruvbox-material";
+      options = {
+        number = true;
       };
 
-      # File browing with NeoTree.
-      neo-tree.enable = true;
+      extraPackages = [
+        pkgs.pyright
+      ];
 
-      # Nix plugin
-      nix.enable = true;
-
-      # Autopairs
-      nvim-autopairs = {
+      colorschemes.catppuccin = {
         enable = true;
-        checkTs = true;
+        flavour = "mocha";
       };
 
-      # Toggle term
-      toggleterm = {
-        enable = true;
-        direction = "horizontal";
+      plugins = {
+        # Comment visual blocks
+        comment-nvim.enable = true;
+
+        # indent-blankline.enable = true;
+
+        # Go to the last place visited on a file
+        lastplace.enable = true;
+
+        # An status bar
+        lualine = {
+          enable = true;
+          theme = "gruvbox-material";
+        };
+
+        # File browing with NeoTree.
+        neo-tree.enable = true;
+
+        # Nix plugin
+        nix.enable = true;
+
+        # Autopairs
+        nvim-autopairs = {
+          enable = true;
+          checkTs = true;
+        };
+
+        # Toggle term
+        toggleterm = {
+          enable = true;
+          direction = "horizontal";
+        };
       };
     };
   };
