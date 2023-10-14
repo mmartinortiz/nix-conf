@@ -1,6 +1,6 @@
 # My Nix configuration
 
-Repository containing my `dotfiles` configuration, managed via [home manager](<https://nix-community.github.io/home-manager/index.html>). The original intention is not to configure a full NixOS system, but my daily machine, which runs Ubuntu. In the future I may try to use NixOS as daily computer system.
+Repository containing my `dotfiles` configuration, managed via [home manager](https://nix-community.github.io/home-manager/index.html). The original intention is not to configure a full NixOS system, but my daily machine, which runs Ubuntu. In the future I may try to use NixOS as daily computer system.
 
 - [My Nix configuration](#my-nix-configuration)
 - [Overview](#overview)
@@ -18,38 +18,38 @@ Repository containing my `dotfiles` configuration, managed via [home manager](<h
 
 The home manager configuration of this repository includes tools like:
 
-- [bat](<https://github.com/sharkdp/bat>): A cat(1) clone with wings.
-- [chafa](<https://hpjansson.org/chafa/>): Terminal graphics for the 21st century.
-- [deadnix](<https://github.com/astro/deadnix>): Scan Nix files for dead code.
-- [diffr](<https://github.com/mookid/diffr>): Yet another diff highlighting tool.
-- [direnv](<https://direnv.net/>): Get into a folder and automatically load `.env` files
-- [du-dust](<https://github.com/bootandy/dust>): A more intuitive version of `du` in Rust.
-- [dua](<https://github.com/Byron/dua-cli>): View disk space usage and delete unwanted data, fast.
-- [duf](<https://github.com/muesli/duf>): Disk Usage/Free Utility - a better 'df' alternative.
-- [exa](<https://the.exa.website/>): A modern replacement for ls.
-- [fd](<https://github.com/sharkdp/fd>): A simple, fast and user-friendly alternative to 'find'.
-- [fish shell](<https://fishshell.com>): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish).
-- With [aliases](<https://fishshell.com/docs/current/cmds/alias.html>) for cat, diff, etc...
-- With [abbreviations](<https://fishshell.com/docs/current/cmds/abbr.html>) for git
-- The [grc](<https://github.com/oh-my-fish/plugin-grc>) plugin. `grc` Colourizer for some commands.
-- [pure](<https://github.com/pure-fish/pure>) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
-- [colored-man-pages](<https://github.com/PatrickF1/colored_man_pages.fish>) plugin. Fish shell plugin to colorize man pages.
-- [bass](<https://github.com/edc/bass>). Make Bash utilities usable in Fish shell.
-- [sponge](<https://github.com/meaningful-ooo/sponge>) plugin. Clean fish history from typos automatically.
-- [pisces](<https://github.com/laughedelic/pisces>) plugin. Helps you to work with paired symbols in the command line.
-- [autovenv](<https://github.com/mmartinortiz/fish-autovenv>) plugin. Enable Python environments automatically.
+- [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
+- [chafa](https://hpjansson.org/chafa/): Terminal graphics for the 21st century.
+- [deadnix](https://github.com/astro/deadnix): Scan Nix files for dead code.
+- [diffr](https://github.com/mookid/diffr): Yet another diff highlighting tool.
+- [direnv](https://direnv.net/): Get into a folder and automatically load `.env` files
+- [du-dust](https://github.com/bootandy/dust): A more intuitive version of `du` in Rust.
+- [dua](https://github.com/Byron/dua-cli): View disk space usage and delete unwanted data, fast.
+- [duf](https://github.com/muesli/duf): Disk Usage/Free Utility - a better 'df' alternative.
+- [exa](https://the.exa.website/): A modern replacement for ls.
+- [fd](https://github.com/sharkdp/fd): A simple, fast and user-friendly alternative to 'find'.
+- [fish shell](https://fishshell.com): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish).
+- With [aliases](https://fishshell.com/docs/current/cmds/alias.html) for cat, diff, etc...
+- With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
+- The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
+- [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
+- [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
+- [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
+- [sponge](https://github.com/meaningful-ooo/sponge) plugin. Clean fish history from typos automatically.
+- [pisces](https://github.com/laughedelic/pisces) plugin. Helps you to work with paired symbols in the command line.
+- [autovenv](https://github.com/mmartinortiz/fish-autovenv) plugin. Enable Python environments automatically.
 - git: By now you should now what this is.
-- [glow](<https://github.com/charmbracelet/glow>): Render markdown on the CLI.
-- [gping](<https://github.com/orf/gping>): Ping, but with a graph.
-- [grc](<https://github.com/garabik/grc>): Generic colouriser.
-- [neovim](<https://neovim.io/>): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](<https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix>)
-- [nixpkgs-fmt](<https://nix-community.github.io/nixpkgs-fmt/>): Nix code formatter for nixpkgs.
-- [procs](<https://github.com/dalance/procs>): A modern replacement for ps written in Rust.
+- [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI.
+- [gping](https://github.com/orf/gping): Ping, but with a graph.
+- [grc](https://github.com/garabik/grc): Generic colouriser.
+- [neovim](https://neovim.io/): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix)
+- [nixpkgs-fmt](https://nix-community.github.io/nixpkgs-fmt/): Nix code formatter for nixpkgs.
+- [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
-- [ripgrep](<https://github.com/BurntSushi/ripgrep>): recursively searches directories for a regex pattern while respecting your gitignore.
-- [tldr](<https://tldr.sh/>): Collaborative cheat-sheets for console commands.
-- [wget2](<https://gitlab.com/gnuwget/wget2>): The successor of GNU Wget.
-- Fonts: [Hack](<https://sourcefoundry.org/hack/>), [Ubuntu Mono](<https://design.ubuntu.com/font>) and [FiraCode](<https://github.com/tonsky/FiraCode>).
+- [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
+- [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
+- [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
+- Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
 
 This list would be out of date. For a full reference check the [`home.nix`](./home-manager/home.nix) file. It also does other things, like setting up `fish` as the default shell for the user (via Bash, because `chsh` cannot see `Home-manager`'s fish installation), install plugins for Vim or setting the default editor to Vim. For a full always up to date reference, check the [`home.nix`](./home-manager/home.nix) file.
 
@@ -74,7 +74,7 @@ After installing `nix` reopen the terminal for reloading the `PATH` variable.
 
 ### Activate the configuration
 
-This configuration uses the [fish shell](<https://fishshell.com/>) as main shell. Because the configuration has been written with Ubuntu in mind, the `fish` shell installed via home manager is not recognized by `chsh`. For making `fish` the default shell, this is started from `bash` on start via a modification of the `~/.bashrc` file. Probably the system where the configuration is deployed already contains a `.bashrc` file. For getting this configuration running, make a backup of the current `.bashrc` file.
+This configuration uses the [fish shell](https://fishshell.com/) as main shell. Because the configuration has been written with Ubuntu in mind, the `fish` shell installed via home manager is not recognized by `chsh`. For making `fish` the default shell, this is started from `bash` on start via a modification of the `~/.bashrc` file. Probably the system where the configuration is deployed already contains a `.bashrc` file. For getting this configuration running, make a backup of the current `.bashrc` file.
 
 ```shell
 # Backup the current bashrc
@@ -91,7 +91,7 @@ nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/
 
 ### Calculate the sha256 has of a Git repository
 
-Despite what says [here](<https://github.com/NixOS/nixpkgs/issues/191128>) or [here](<https://stackoverflow.com/questions/31659527/what-is-the-meaning-of-sha256-in-nixpkgs-fetchgit-where-does-the-value-come-fro>), the only way I found to make it work is letting it fail the first time and then use the Hash calculated by Nix.
+Despite what says [here](https://github.com/NixOS/nixpkgs/issues/191128) or [here](https://stackoverflow.com/questions/31659527/what-is-the-meaning-of-sha256-in-nixpkgs-fetchgit-where-does-the-value-come-fro), the only way I found to make it work is letting it fail the first time and then use the Hash calculated by Nix.
 
 ```nix
 {
@@ -137,7 +137,7 @@ Some things to be done:
 
 - [ ] Which key plugin
 
-Keyboard mappings. More about notations, [here](<https://neovim.io/doc/user/intro.html#key-notation>)
+Keyboard mappings. More about notations, [here](https://neovim.io/doc/user/intro.html#key-notation)
 
 ```
 # By default, the leader key is \
@@ -197,15 +197,15 @@ e           # Show hover information
 
 ## Resources
 
-- [A list of new-ish command line tools](<https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/>)
-- [Home Manager manual](<https://nix-community.github.io/home-manager/>)
-- [Home Manager options](<https://rycee.gitlab.io/home-manager/options.html>)
-- [NixOS Wiki](<https://nixos.wiki/wiki/Main_Page>)
-- [NixOS Package search](<https://search.nixos.org/packages?channel=23.05&size=50&sort=relevance&type=packages&query=python311+venv>)
-- [NixOS Discourse](<https://discourse.nixos.org/>)
-- [Wimpy's NixOS & Home Manager Configurations](<https://github.com/wimpysworld/nix-config/tree/039e2f0151b03b9a3aa2991230a6becf75d91c43>)
-- [How to: Use Nix on Ubuntu](<https://tech.aufomm.com/my-nix-journey-use-nix-with-ubuntu/#Install-Nix>)
-- [How to: Getting started with Home Manager for Nix](<https://ghedam.at/24353/tutorial-getting-started-with-home-manager-for-nix>)
+- [A list of new-ish command line tools](https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/)
+- [Home Manager manual](https://nix-community.github.io/home-manager/)
+- [Home Manager options](https://rycee.gitlab.io/home-manager/options.html)
+- [NixOS Wiki](https://nixos.wiki/wiki/Main_Page)
+- [NixOS Package search](https://search.nixos.org/packages?channel=23.05&size=50&sort=relevance&type=packages&query=python311+venv)
+- [NixOS Discourse](https://discourse.nixos.org/)
+- [Wimpy's NixOS & Home Manager Configurations](https://github.com/wimpysworld/nix-config/tree/039e2f0151b03b9a3aa2991230a6becf75d91c43)
+- [How to: Use Nix on Ubuntu](https://tech.aufomm.com/my-nix-journey-use-nix-with-ubuntu/#Install-Nix)
+- [How to: Getting started with Home Manager for Nix](https://ghedam.at/24353/tutorial-getting-started-with-home-manager-for-nix)
 
 ## TODOs
 
