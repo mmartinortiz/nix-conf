@@ -10,6 +10,7 @@
         jsonls.enable = true;
         pyright.enable = true;
         ruff-lsp.enable = true;
+        taplo.enable = true;
         yamlls.enable = true;
       };
       keymaps = {
@@ -69,6 +70,7 @@
           prettier.enable = true;
           rustfmt.enable = true;
           shfmt.enable = true;
+          taplo.enable = true;
         };
       };
     };
