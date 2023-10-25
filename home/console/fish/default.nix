@@ -20,10 +20,6 @@
       diff = "diffr";
       glow = "glow --pager";
       ip = "ip --color --brief";
-      ls = "eza";
-      ll = "eza --long";
-      la = "eza --all --long";
-      lt = "eza --tree";
       less = "bat --paging=always";
       more = "bat --paging=always";
       tree = "exa --tree --group-directories-first";
