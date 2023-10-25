@@ -27,17 +27,38 @@
     nixvim,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    homeConfigurations = {
-      manolo = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          nixvim.homeManagerModules.nixvim
-          ./home/default.nix
-        ];
+    mkHomeConfig = machineModule: system: home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+
+      modules = [
+        nixvim.homeManagerModules.nixvim
+        # ./common
+        ./home/default.nix
+        machineModule
+      ];
+
+      extraSpecialArgs = {
+        inherit inputs system;
       };
     };
+
+  in {
+homeConfigurations."manolo@laptop" = mkHomeConfig ./machines/laptop.nix "x86_64-linux";
+homeConfigurations."manolo@desktop" = mkHomeConfig ./machines/desktop.nix "x86_64-linux";
   };
+  #   system = "x86_64-linux";
+  #   pkgs = nixpkgs.legacyPackages.${system};
+  # in {
+  #   homeConfigurations = {
+  #     manolo = home-manager.lib.homeManagerConfiguration {
+  #       inherit pkgs;
+  #       modules = [
+  #         nixvim.homeManagerModules.nixvim
+  #         ./home/default.nix
+  #       ];
+  #     };
+  #   };
+  # };
 }
