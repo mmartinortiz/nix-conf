@@ -22,11 +22,10 @@
 
   outputs = {
     nixpkgs,
-    flake-utils,
     home-manager,
     nixvim,
     ...
-  } @ inputs: let
+  }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
