@@ -30,30 +30,22 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations = {
-      manolo = home-manager.lib.homeManagerConfiguration {
+      laptop = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           nixvim.homeManagerModules.nixvim
           ./home/default.nix
+          ./machines/laptop.nix
+        ];
+      };
+      server = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          nixvim.homeManagerModules.nixvim
+          ./home/default.nix
+          ./machines/server.nix
         ];
       };
     };
-
-  in {
-homeConfigurations."manolo@laptop" = mkHomeConfig ./machines/laptop.nix "x86_64-linux";
-homeConfigurations."manolo@desktop" = mkHomeConfig ./machines/desktop.nix "x86_64-linux";
   };
-  #   system = "x86_64-linux";
-  #   pkgs = nixpkgs.legacyPackages.${system};
-  # in {
-  #   homeConfigurations = {
-  #     manolo = home-manager.lib.homeManagerConfiguration {
-  #       inherit pkgs;
-  #       modules = [
-  #         nixvim.homeManagerModules.nixvim
-  #         ./home/default.nix
-  #       ];
-  #     };
-  #   };
-  # };
 }
