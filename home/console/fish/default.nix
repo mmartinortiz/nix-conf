@@ -34,6 +34,7 @@
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" [
       (builtins.readFile ./config/config.fish)
+      (builtins.readFile ./config/ayu_mirage.fish)
       "set -g SHELL ${pkgs.fish}/bin/fish"
     ]);
     plugins = [
@@ -80,8 +81,4 @@
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
     };
   };
-  home.file.".config/fish/themes/catppuccin_mocha.theme".source =
-      ./config/catppuccin_mocha.theme;
-  home.file.".config/fish/themes/custom.theme".source =
-      ./config/custom.theme;
 }
