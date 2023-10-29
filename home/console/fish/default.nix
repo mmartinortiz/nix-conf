@@ -82,4 +82,6 @@
   };
   home.file.".config/fish/themes/catppuccin_mocha.theme".source =
       ./config/catppuccin_mocha.theme;
+  home.file.".config/fish/themes/custom.theme".source =
+      ./config/custom.theme;
 }
