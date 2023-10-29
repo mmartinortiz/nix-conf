@@ -11,9 +11,6 @@
     keyMode = "vi";
     mouse = true;
     extraConfig = ''
-      set -g default-command $HOME/.nix-profile/bin/fish
-      set -g default-shell $HOME/.nix-profile/bin/fish
-
       # Clipboard integration for Linux
       # bind-key -T copy-mode C-w send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
       # bind-key -T copy-mode M-w send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
