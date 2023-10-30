@@ -47,6 +47,7 @@ The home manager configuration of this repository includes tools like:
 - [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
+- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank).
 - [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
 - [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
 - Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
@@ -77,8 +78,9 @@ After installing `nix` reopen the terminal for reloading the `PATH` variable.
 Add the flag `-b backup` if you get an error about one of your files already existing.
 
 There are currently two different profiles:
-- `laptop`: The default configuration
-- `server`: Laptop's configuration plus some specific for a server, like `tmux`
+
+- `laptop`: The default configuration.
+- `server`: Laptop's configuration plus some specifics for a server, like auto-attach to a `tmux` session on start/connect.
 
 ```shell
 # Backup the current bashrc
