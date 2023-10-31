@@ -1,14 +1,14 @@
-{pkgs, ...}: {
+{...}: {
   # Server specific configuration
   programs.fish = {
     # Extend fish with the fish.tmux plugin for automatically
     # start and attach to a tmux session on login
     interactiveShellInit = ''
     if set -q TMUX
-	    tmux switch -t $session_name
+      tmux switch -t main
     else
-	    tmux new-session -D -s "$session_name" -c "$dir" $argv[3..-1] &>/dev/null || \
-		  tmux attach -t "$session_name" -c "$dir"
+      tmux new-session -D -s main -c "$HOME" || \
+      tmux attach -t main -c "$HOME"
     end
     '';
   };
