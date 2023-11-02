@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{config, pkgs, ...}: {
   # Server specific configuration
   programs.tmux = {
     enable = true;
@@ -10,7 +10,7 @@
     clock24 = true;
     keyMode = "vi";
     mouse = true;
-    shell = "${pkgs.fish}/bin/fish";
+    shell = "${config.home.homeDirectory}/bin/fish";
     extraConfig = ''
       # Clipboard integration for Linux
       # bind-key -T copy-mode C-w send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
