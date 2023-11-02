@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   # Server specific configuration
   programs.fish = {
     plugins = [
