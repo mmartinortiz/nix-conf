@@ -2,6 +2,23 @@
 
 ## tmux
 
+### Panes & Windows
+
+- Navigation
+  - `C-b w` shows all windows and panes.
+  - `C-b j|k` move to previous/next window.
+  - `C h|j|k|l` moves between panes. Provided by [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator).
+  - `C-b <arrow key>` move between panes.
+  - `C-b n` next window.
+  - `C-b p` previous window.
+
+- Resize panes
+  - `C-b C-<arrow key>` resizes the pane in small steps.
+  - `C-b z` maximazes the pane. Press it again to restore the size.
+  - `C-b Space` iterates over layouts.
+
+### Copy and Paste
+
 [Official Tmux copy and paste documentation](https://github.com/tmux/tmux/wiki/Getting-Started#copy-and-paste).
 
 - `C-b [` enters the **copy mode**. `vi` movements apply.
