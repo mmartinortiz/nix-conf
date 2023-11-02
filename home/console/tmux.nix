@@ -11,6 +11,7 @@
     keyMode = "vi";
     mouse = true;
     shell = "${config.home.homeDirectory}/.nix-profile/bin/fish";
+    terminal = "screen-256color";
     extraConfig = ''
       # Clipboard integration for Linux
       # bind-key -T copy-mode C-w send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
