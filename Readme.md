@@ -47,7 +47,7 @@ The home manager configuration of this repository includes tools like:
 - [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
-- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank).
+- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
 - [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
 - Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
@@ -94,6 +94,8 @@ nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/#laptop
 ```
 
 ## How to's
+
+[Cheatsheet](./Cheatsheet.md)
 
 ### Calculate the sha256 has of a Git repository
 
