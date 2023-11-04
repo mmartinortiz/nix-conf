@@ -20,6 +20,7 @@
     ./console/git.nix
     ./console/micro.nix
     ./console/neovim
+    ./console/tmux.nix
   ];
 
   programs = {

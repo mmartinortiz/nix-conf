@@ -3,16 +3,16 @@
 Repository containing my `dotfiles` configuration, managed via [home manager](https://nix-community.github.io/home-manager/index.html). The original intention is not to configure a full NixOS system, but my daily machine, which runs Ubuntu. In the future I may try to use NixOS as daily computer system.
 
 - [My Nix configuration](#my-nix-configuration)
-- [Overview](#overview)
-- [Install](#install)
-- [Dependencies](#dependencies)
-- [Install Nix](#install-nix)
-- [Activate the configuration](#activate-the-configuration)
-- [How to's](#how-tos)
-- [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
-- [An specific environment for Python](#an-specific-environment-for-python)
-- [Resources](#resources)
-- [TODOs](#todos)
+  - [Overview](#overview)
+  - [Install](#install)
+    - [Dependencies](#dependencies)
+    - [Install Nix](#install-nix)
+    - [Activate the configuration](#activate-the-configuration)
+  - [How to's](#how-tos)
+    - [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
+  - [An specific environment for Python](#an-specific-environment-for-python)
+  - [NeoVim](#neovim)
+  - [Resources](#resources)
 
 ## Overview
 
@@ -47,6 +47,7 @@ The home manager configuration of this repository includes tools like:
 - [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
 - Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
+- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
 - [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
 - Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
@@ -74,20 +75,37 @@ After installing `nix` reopen the terminal for reloading the `PATH` variable.
 
 ### Activate the configuration
 
-This configuration uses the [fish shell](https://fishshell.com/) as main shell. Because the configuration has been written with Ubuntu in mind, the `fish` shell installed via home manager is not recognized by `chsh`. For making `fish` the default shell, this is started from `bash` on start via a modification of the `~/.bashrc` file. Probably the system where the configuration is deployed already contains a `.bashrc` file. For getting this configuration running, make a backup of the current `.bashrc` file.
+Add the flag `-b backup` if you get an error about one of your files already existing.
+
+There are currently two different profiles:
+
+- `laptop`: The default configuration.
+- `server`: Laptop's configuration plus some specifics for a server, like auto-attach to a `tmux` session on start/connect.
 
 ```shell
 # Backup the current bashrc
 mv ~/.bashrc ~/.bashrc.backup
 
 # From the 'nix-conf' folder
-nix run nixpkgs#home-manager -- switch --flake .
+nix run nixpkgs#home-manager -- switch --flake .#laptop
 
 # Alternatively
-nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/
+nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/#laptop
+```
+
+For setting the Fish Shell managed by Home Manager as the default shell for the user, add the full path of the shell to `/etc/shells` and later use `chsh -s` and indicate the full path. **This may be a security risk if you share your computer with other users and they use your shell**.
+
+```bash
+> which fish
+/home/user/.nix-profile/bin/fish
+> sudo vim /etc/shells
+# Add the previous full path to file
+> chsh -s /home/user/.nix-profile/bin/fish
 ```
 
 ## How to's
+
+[Cheatsheet](./Cheatsheet.md)
 
 ### Calculate the sha256 has of a Git repository
 
@@ -204,17 +222,3 @@ Keyboard mappings. More about notations, [here](https://neovim.io/doc/user/intro
 - [Wimpy's NixOS & Home Manager Configurations](https://github.com/wimpysworld/nix-config/tree/039e2f0151b03b9a3aa2991230a6becf75d91c43)
 - [How to: Use Nix on Ubuntu](https://tech.aufomm.com/my-nix-journey-use-nix-with-ubuntu/#Install-Nix)
 - [How to: Getting started with Home Manager for Nix](https://ghedam.at/24353/tutorial-getting-started-with-home-manager-for-nix)
-
-## TODOs
-
-- [ ] Incorporate fish functions
-- [ ] Install Go
-- [ ] Install Rust
-- [ ] Python programs, via `pipx`?
-- [ ] ipython
-- [ ] mu-editor
-- [ ] esptool
-- [ ] Arduino IDE
-- [ ] Profiles per computer
-- [ ] Try a desktop (Can I change the desktop on Ubuntu via Home Manager?)
-- [ ] Can this be reused for different usernames?
