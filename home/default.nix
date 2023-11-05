@@ -18,6 +18,7 @@
     ./console/eza.nix
     ./console/fish
     ./console/git.nix
+    ./console/lazygit.nix
     ./console/micro.nix
     ./console/neovim
     ./console/tmux.nix
