@@ -3,6 +3,7 @@
     alejandra # Format Nix files
     chafa # Terminal image viewer
     deadnix
+    devbox # Create isolated shells for development
     diffr # Modern Unix `diff`
     du-dust
     dua # Modern Unix `du`
