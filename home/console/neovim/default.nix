@@ -25,6 +25,14 @@
         flavour = "mocha";
       };
 
+      clipboard = {
+        register = "unnamedplus";
+        providers = {
+          wl-copy.enable = true;
+          xclip.enable = true;
+        };
+      };
+
       plugins = {
         # Comment visual blocks
         comment-nvim.enable = true;
