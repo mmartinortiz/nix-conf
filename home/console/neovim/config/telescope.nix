@@ -13,13 +13,31 @@
       telescope-ui-select-nvim
     ];
 
-    maps.normal = {
-      "<leader>ff" = "<cmd>Telescope find_files<cr>";
-      "<leader>fg" = "<cmd>Telescope live_grep<cr>";
-      "<leader>fb" = "<cmd>Telescope buffers<cr>";
-      "<leader>fh" = "<cmd>Telescope help_tags<cr>";
-      "<leader>fk" = "<cmd>Telescope keymaps<cr>";
-      "<leader>fp" = "<cmd>Telescope commands<cr>";
-    };
+    keymaps = [
+      {
+        key = "<leader>ff";
+        action = "<cmd>Telescope find_files<cr>";
+      }
+      {
+        key = "<leader>fg";
+        action = "<cmd>Telescope live_grep<cr>";
+      }
+      {
+        key = "<leader>fb";
+        action = "<cmd>Telescope buffers<cr>";
+      }
+      {
+        key = "<leader>fh";
+        action = "<cmd>Telescope help_tags<cr>";
+      }
+      {
+        key = "<leader>fk";
+        action = "<cmd>Telescope keymaps<cr>";
+      }
+      {
+        key = "<leader>fp";
+        action = "<cmd>Telescope commands<cr>";
+      }
+    ];
   };
 }
