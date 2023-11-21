@@ -48,9 +48,6 @@
           theme = "gruvbox-material";
         };
 
-        # File browing with NeoTree.
-        neo-tree.enable = true;
-
         # Nix plugin
         nix.enable = true;
 

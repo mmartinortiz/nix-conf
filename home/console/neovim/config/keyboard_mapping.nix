@@ -59,16 +59,6 @@
           desc = "Comment line/block";
         };
       }
-
-      # NeoTree
-      {
-        key = "<C-b>";
-        mode = "n";
-        action = "<cmd>Neotree toggle<cr>";
-        options = {
-          desc = "Toggle Neotree visibility";
-        };
-      }
     ];
   };
 }
