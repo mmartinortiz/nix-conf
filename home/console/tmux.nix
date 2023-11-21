@@ -26,6 +26,10 @@
       bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded ~/.config/tmux/tmux.conf"
       bind k next-window
       bind j previous-window
+
+      # More intuitive vertical and horizontal splits
+      bind v split-window -v -c "#{pane_current_path}"
+      bind h split-window -h -c "#{pane_current_path}"
     '';
   };
 }

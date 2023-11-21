@@ -4,6 +4,10 @@
 
 ### Panes & Windows
 
+- Splits
+  - `C-b v` **v**ertical split.
+  - `C-b h` **h**orizontal split.
+
 - Navigation
   - `C-b w` shows all windows and panes.
   - `C-b j|k` move to previous/next window.
