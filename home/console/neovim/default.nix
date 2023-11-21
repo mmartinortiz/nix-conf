@@ -66,6 +66,10 @@
           direction = "horizontal";
         };
 
+        tmux-navigator = {
+          enable = true;
+        };
+
         which-key = {
           enable = true;
         };
