@@ -1,0 +1,45 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "alejandra@latest": {
+      "last_modified": "2023-11-19T17:46:56Z",
+      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#alejandra",
+      "source": "devbox-search",
+      "version": "3.0.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/d7m66p5764jf5s3ahhijqzdqqjg9njbf-alejandra-3.0.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/ismwypjgbf4idza5nkxhycml5yszsah8-alejandra-3.0.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/bvxblld1y0jm96d8nykngk1lkfz267a1-alejandra-3.0.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/imli2in1nr1h8qh7zh62knygpl2zj66l-alejandra-3.0.0"
+        }
+      }
+    },
+    "pre-commit@latest": {
+      "last_modified": "2023-11-19T17:46:56Z",
+      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#pre-commit",
+      "source": "devbox-search",
+      "version": "3.3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/x5dgvv021d2z5invlm22hi9wr3s7kvvy-pre-commit-3.3.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/yv438wrf87hb3xh3c1a5cln1faabn43i-pre-commit-3.3.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/shxsdy5k91gmrdk58vmcllx6qwp0sznw-pre-commit-3.3.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/r8y724w3qlkj8gbhpvl0sbphnxpr69s9-pre-commit-3.3.3"
+        }
+      }
+    }
+  }
+}
