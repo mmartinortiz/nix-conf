@@ -5,5 +5,11 @@
     diff-so-fancy.enable = true;
     userName = "manolo";
     userEmail = "mmartinortiz@gmail.com";
+
+    extraConfig = {
+      push = {
+        autoSetupRemote = true;
+      };
+    };
   };
 }
