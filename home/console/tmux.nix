@@ -25,6 +25,8 @@
       # bind-key -T copy-mode MouseDragEnd1Pane send -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
       # bind-key -T root C-y run "xsel -o | tmux load-buffer - ; tmux paste-buffer"
       set -g @yank_selection_mouse 'clipboard' # or 'primary' or 'secondary'
+      # Get into copy mode with Ctrl-g
+      bind-key -n 'C-g' copy-mode
 
       bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded ~/.config/tmux/tmux.conf"
       bind k next-window
