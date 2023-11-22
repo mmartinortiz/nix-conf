@@ -15,7 +15,7 @@ repos:
     # depending on what pre-requisites you have:
     hooks:
       # No prerequisites
-      - id: alejandra
+      - id: alejandra-system
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: "v3.1.0" # Use the sha or tag you want to point at
