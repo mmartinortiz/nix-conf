@@ -25,7 +25,7 @@
 
 [Official Tmux copy and paste documentation](https://github.com/tmux/tmux/wiki/Getting-Started#copy-and-paste).
 
-- `C-a [` enters the **copy mode**. `vi` movements apply.
+- `C-g` enters the **copy mode**. `vi` movements apply.
 
 - Copy mode
   - `space` select text.
