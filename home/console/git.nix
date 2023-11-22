@@ -2,7 +2,14 @@
   programs.git = {
     enable = true;
     lfs.enable = false;
-    diff-so-fancy.enable = true;
+
+    delta = {
+      enable = true;
+      options = {
+        side-by-side = true;
+      };
+    };
+
     userName = "manolo";
     userEmail = "mmartinortiz@gmail.com";
 
