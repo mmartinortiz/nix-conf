@@ -20,9 +20,8 @@
         pkgs.pyright
       ];
 
-      colorschemes.catppuccin = {
+      colorschemes.ayu.mirage = {
         enable = true;
-        flavour = "mocha";
       };
 
       clipboard = {
