@@ -105,7 +105,7 @@ For setting the Fish Shell managed by Home Manager as the default shell for the 
 
 ## How to's
 
-[Cheatsheet](./Cheatsheet.md)
+[Cheatsheet](./Cheatsheet.md) with key bindings for tmux and neovim.
 
 ### Calculate the sha256 has of a Git repository
 
@@ -147,69 +147,8 @@ Some of the things it brings:
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 - [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by lua.
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim): A neovim lua plugin to help easily manage multiple terminal windows.
-- [NeoTree](https://github.com/nvim-neo-tree/neo-tree.nvim): Neovim plugin to manage the file system and other tree like structures.
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim): Git integration for buffers.
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. Files and more.
-
-Some things to be done:
-
-- [ ] Which key plugin
-
-Keyboard mappings. More about notations, [here](https://neovim.io/doc/user/intro.html#key-notation)
-
-```
-# By default, the leader key is \
-# LSP Navigate in diagnostics
-<leader>k   # Go to next warning/error
-<leader>j   # Go to previous warning/error
-<leader>ld  # Go to definition
-<leader>lr  # Go to references
-<leader>rt  # Go to type definition
-<leader>ri  # Go to implementation
-<leader>lrn # Rename
-<leader>lf  # Format file
-<leader>e   # Show hover information
-
-# ToggleTerm - Normal mode
-<leader>tf  # Floating terminal
-<ledaer>th  # Horizontal terminal
-<leader>tv  # Vertical terminal
-<C-\>       # Toggle terminal (default direction)
-
-# Comments - Normal and Visual Mode
-<C-/>  # Toggle comments
-
-# Completion - Insert Mode
-<C-Space>  # Trigger completion
-<CR>       # Accept completion
-<C-j>      # Move up on completion list
-<C-k>      # Move down on completion list
-
-# Telescope
-<leader>ff   # Telescope find_files
-<leader>fg   # Telescope live_grep
-<leader>fb   # Telescope buffers
-<leader>fh   # Telescope help_tags
-<leader>fk   # Telescope keymaps
-<leader>fp   # Telescope commands
-
-# More on https://github.com/nvim-telescope/telescope.nvim#default-mappings
-
-# Barbar. Reordering tabs
-<m-s-k>  # Move tab to right
-<m-s-j>  # Move tab to left
-<m-p>    # Pin tab
-
-# Barbar. Navigating tabs
-<m-k>  # Move to next tab
-<m-j>  # Move to previous tab
-
-# Barbar. Close tab
-<m-x>  # Close tab
-
-# Neotree
-<C-b>  # Toggle Neotree visibility
-```
 
 ## Resources
 
