@@ -145,7 +145,8 @@ Some of the things it brings:
 - LSP for Python with Pyright, CMP (completion plugin) and [treesitter](https://github.com/tree-sitter/tree-sitter).
 - [BarBar](https://github.com/romgrk/barbar.nvim): The neovim tabline plugin.
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-- [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by lua.
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip): Snippet Engine for Neovim written in Lua.
+- [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by Lua.
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim): A neovim lua plugin to help easily manage multiple terminal windows.
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim): Git integration for buffers.
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. Files and more.
