@@ -33,6 +33,7 @@
       gp = "git push";
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
       db = "devbox";
+      dbs = "devbox shell";
     };
     interactiveShellInit = lib.strings.concatStrings (lib.strings.intersperse "\n" [
       (builtins.readFile ./config/config.fish)
