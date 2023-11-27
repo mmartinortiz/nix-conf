@@ -47,6 +47,8 @@
           theme = "gruvbox-material";
         };
 
+        luasnip.enable = true;
+
         # Nix plugin
         nix.enable = true;
 
