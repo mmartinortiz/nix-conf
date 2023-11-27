@@ -52,7 +52,7 @@
             action = "rename";
             desc = "Rename object";
           };
-          "<leader>lf" = {
+          "<leader>F" = {
             action = "format";
             desc = "Format file";
           };
@@ -76,6 +76,8 @@
     };
 
     plugins.treesitter.enable = true;
+
+    plugins.lsp-format.enable = true;
 
     plugins.nvim-cmp = {
       enable = true;

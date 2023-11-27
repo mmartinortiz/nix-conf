@@ -62,7 +62,7 @@ By default, the leader key is `\`.
 - `<leader>rt`: Go to type definition.
 - `<leader>ri`: Go to implementation.
 - `<leader>lrn`: Rename.
-- `<leader>lf`: Format file.
+- `<leader>F`: Format file.
 - `<leader>e`: Show hover information.
 
 ### ToggleTerm - Normal mode
