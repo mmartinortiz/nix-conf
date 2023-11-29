@@ -27,7 +27,7 @@
       {
         # https://github.com/tmux-plugins/tmux-continuum
         # Continuous saving of tmux environment. Automatic restore when tmux is started.
-        plugin = "continuum";
+        plugin = continuum;
         extraConfig = ''
           set -g @continuum-save-interval '15'
           set -g @continuum-restore 'on'
