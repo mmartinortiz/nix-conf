@@ -24,6 +24,25 @@
           bind-key -n 'C-g' copy-mode
         '';
       }
+      {
+        # https://github.com/tmux-plugins/tmux-continuum
+        # Continuous saving of tmux environment. Automatic restore when tmux is started.
+        plugin = "continuum";
+        extraConfig = ''
+          set -g @continuum-save-interval '15'
+          set -g @continuum-restore 'on'
+        '';
+      }
+      {
+        # https://github.com/tmux-plugins/tmux-resurrect
+        # Manually persists tmux environment across system restarts.
+        #   prefix + Ctrl-s - save
+        #   prefix + Ctrl-r - restore
+        #
+        plugin = resurrect;
+        # Restore Neovim sessions
+        extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+      }
     ];
     clock24 = true;
     keyMode = "vi";
