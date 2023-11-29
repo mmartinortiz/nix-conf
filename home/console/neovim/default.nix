@@ -20,8 +20,18 @@
         pkgs.pyright
       ];
 
-      colorschemes.ayu.mirage = {
-        enable = true;
+      colorschemes = {
+        catppuccin = {
+          enable = true;
+          flavour = "mocha";
+          transparentBackground = true;
+          integrations = {
+            barbar = true;
+            gitsigns = true;
+            telescope.enabled = true;
+            which_key = true;
+          };
+        };
       };
 
       clipboard = {
@@ -35,6 +45,16 @@
       plugins = {
         # Comment visual blocks
         comment-nvim.enable = true;
+
+        # Highligh current line
+        cursorline = {
+          enable = true;
+          cursorline = {
+            enable = true;
+            timeout = 0;
+            number = true;
+          };
+        };
 
         # indent-blankline.enable = true;
 
