@@ -3,8 +3,13 @@
     enable = true;
     lfs.enable = false;
 
-    delta = {
+    difftastic = {
       enable = true;
+      display = "side-by-side";
+    };
+
+    delta = {
+      enable = false;
       options = {
         side-by-side = true;
       };
