@@ -14,6 +14,7 @@
   imports = [
     ./console/packages.nix
     ./console/bat.nix
+    ./console/bottom.nix
     ./console/direnv.nix
     ./console/eza.nix
     ./console/fish

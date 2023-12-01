@@ -19,6 +19,7 @@ Repository containing my `dotfiles` configuration, managed via [home manager](ht
 The home manager configuration of this repository includes tools like:
 
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
+- [bottom](https://github.com/ClementTsang/bottom): Yet another cross-platform graphical process/system monitor.
 - [chafa](https://hpjansson.org/chafa/): Terminal graphics for the 21st century.
 - [deadnix](https://github.com/astro/deadnix): Scan Nix files for dead code.
 - [diffr](https://github.com/mookid/diffr): Yet another diff highlighting tool.
