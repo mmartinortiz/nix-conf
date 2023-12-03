@@ -4,6 +4,9 @@
   inputs = {
     # systems.url = "github:nix-systems/x86_64-linux";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # TODO: Check https://github.com/LGUG2Z/nixos-wsl-starter/blob/master/flake.nix
+    # for installing packages both from stable an unstable.
+    # Requires an overlay
     flake-utils = {
       url = "github:numtide/flake-utils";
       # inputs.systems.follows = "systems";
