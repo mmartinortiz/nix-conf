@@ -12,6 +12,7 @@
     glow # Terminal Markdown renderer
     gping # Modern Unix `ping`
     grc # Colour terminal output
+    lunarvim
     procs # Modern Unix `ps`
     ripgrep # Modern Unix `grep`
     tldr # Modern Unix `man`
@@ -35,6 +36,9 @@ in {
     #     pkgs.some-package
     #     pkgs.another-package
     #   ];
+
+    # FIXME: if you want to version your LunarVim config, add it to the root of this repo and uncomment the next line
+    # home.file.".config/lvim/config.lua".source = ./lvim_config.lua;
 
     sessionVariables = {
       EDITOR = "nvim";

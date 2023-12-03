@@ -116,3 +116,7 @@ Navigating tabs
 Close tab
 
 - `<m-x>`: Close tab
+
+## Lunarvim
+
+[Keybindings](https://www.lunarvim.org/docs/configuration/keybindings)

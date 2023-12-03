@@ -33,6 +33,7 @@ The home manager configuration of this repository includes tools like:
 - With [aliases](https://fishshell.com/docs/current/cmds/alias.html) for cat, diff, etc...
 - With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
 - The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
+- [lunarvim](https://www.lunarvim.org): An IDE layer for Neovim with sane defaults. Completely free and community driven.
 - [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
 - [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
 - [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
