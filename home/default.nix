@@ -22,7 +22,7 @@ in {
   home = {
     username = "manolo";
     homeDirectory = "/home/manolo";
-    stateVersion = "23.05";
+    stateVersion = "23.11";
 
     packages = my-packages;
 
