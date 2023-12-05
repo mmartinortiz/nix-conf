@@ -26,6 +26,7 @@
       tree = "exa --tree --group-directories-first";
       wget = "wget2";
       lg = "lazygit";
+      vim = "lvim";
     };
     shellAbbrs = {
       ga = "git add";

@@ -38,12 +38,12 @@ in {
     #   ];
 
     # FIXME: if you want to version your LunarVim config, add it to the root of this repo and uncomment the next line
-    # home.file.".config/lvim/config.lua".source = ./lvim_config.lua;
+    file.".config/lvim/config.lua".source = ./console/lunarvim/config.lua;
 
     sessionVariables = {
-      EDITOR = "nvim";
-      SYSTEMD_EDITOR = "nvim";
-      VISUAL = "nvim";
+      EDITOR = "lvim";
+      SYSTEMD_EDITOR = "lvim";
+      VISUAL = "lvim";
     };
   };
 
@@ -56,7 +56,7 @@ in {
     ./console/git.nix
     ./console/lazygit.nix
     ./console/micro.nix
-    ./console/neovim
+    # ./console/neovim
     ./console/tmux.nix
   ];
 
