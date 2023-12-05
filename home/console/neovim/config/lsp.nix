@@ -82,7 +82,13 @@
     plugins.nvim-cmp = {
       enable = true;
       autoEnableSources = true;
-      sources = [{name = "nvim_lsp";}];
+      sources = [
+        {name = "nvim_lsp";}
+        {name = "luasnip";}
+        {name = "buffer";}
+        {name = "nvim_lua";}
+        {name = "path";}
+      ];
       snippet.expand = "luasnip";
       mappingPresets = ["insert"];
       mapping = {
@@ -119,6 +125,10 @@
                   's',
                 })";
       };
+    };
+    plugins = {
+      cmp-nvim-lsp-document-symbol.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
     };
   };
 }
