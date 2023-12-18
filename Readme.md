@@ -82,7 +82,7 @@ Add the flag `-b backup` if you get an error about one of your files already exi
 There are currently two different profiles:
 
 - `laptop`: The default configuration.
-- `server`: Laptop's configuration plus some specifics for a server, like auto-attach to a `tmux` session on start/connect.
+- `server`: Laptop's configuration plus some specifics for a server.
 
 ```shell
 # Backup the current bashrc
