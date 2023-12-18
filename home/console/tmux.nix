@@ -57,6 +57,8 @@
       bind v split-window -v -c "#{pane_current_path}"
       bind h split-window -h -c "#{pane_current_path}"
 
+      set -g status-position "top"
+
       bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded ~/.config/tmux/tmux.conf"
     '';
   };
