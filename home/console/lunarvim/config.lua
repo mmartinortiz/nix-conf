@@ -14,3 +14,8 @@ lvim.builtin.bufferline.keymap.normal_mode["<m-x>"] = ":bd<CR>"
 lvim.plugins = {
 	"christoomey/vim-tmux-navigator"
 }
+
+-- Soft wrap of Markfown files
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.list = false
