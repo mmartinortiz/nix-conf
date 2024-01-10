@@ -25,6 +25,9 @@
       diff = {
         algorithm = "histogram";
       };
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 }
