@@ -27,6 +27,7 @@
       wget = "wget2";
       lg = "lazygit";
       vim = "lvim";
+      update-clean = "nix flake update && nix-store --gc";
     };
     shellAbbrs = {
       ga = "git add";
