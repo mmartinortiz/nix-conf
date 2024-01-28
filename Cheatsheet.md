@@ -129,8 +129,8 @@ and some convenient keybindings:
 
 - `F1` _ Used by X11 _
   - `Shift-F1` Display this help
-  - `F2` Create a new window
-- `Shift-F2` Create a horizontal split
+- `F2` Create a new window
+  - `Shift-F2` Create a horizontal split
   - `Ctrl-F2` Create a vertical split
   - `Ctrl-Shift-F2` Create a new session
 - `F3/F4` Move focus among windows
