@@ -19,14 +19,27 @@
     userEmail = "mmartinortiz@gmail.com";
 
     extraConfig = {
-      push = {
-        autoSetupRemote = true;
+      branch = {
+        sort = "-committerdate";
+      };
+      core = {
+        editor = "vim";
       };
       diff = {
         algorithm = "histogram";
       };
+      fetch = {
+        prune = true;
+      };
       init = {
         defaultBranch = "main";
+      };
+      log = {
+        date = "iso";
+      };
+      push = {
+        autoSetupRemote = true;
+        default = "current";
       };
     };
   };
