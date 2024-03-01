@@ -16,6 +16,7 @@
     procs # Modern Unix `ps`
     ripgrep # Modern Unix `grep`
     tldr # Modern Unix `man`
+    uv # Replacement for pip written in Rust
     wget2
     (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
   ];
