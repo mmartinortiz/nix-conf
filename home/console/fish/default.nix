@@ -67,15 +67,15 @@
         name = "pisces";
         src = pkgs.fishPlugins.pisces.src;
       }
-      # {
-      #   name = "fish-autovenv";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "mmartinortiz";
-      #     repo = "fish-autovenv";
-      #     rev = "1.0.0";
-      #     sha256 = "f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo=";
-      #   };
-      # }
+      {
+        name = "fish-autovenv";
+        src = pkgs.fetchFromGitHub {
+          owner = "mmartinortiz";
+          repo = "fish-autovenv";
+          rev = "1.0.0";
+          sha256 = "f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo=";
+        };
+      }
     ];
     functions = {
       __fish_command_not_found_handler = {

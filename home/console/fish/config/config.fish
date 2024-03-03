@@ -1,6 +1,9 @@
-# Customize "pure" colors
+# Customize "pure" colors and options
 set -g pure_color_current_directory brcyan
 set -g pure_color_mute yellow
+
+set --universal pure_symbol_virtualenv_prefix "" # 🐍
+set --universal pure_color_virtualenv "green"
 
 fish_add_path ~/.local/bin
 
@@ -12,4 +15,3 @@ if test -n "$TERM"
   set -g fish_cursor_replace_one underscore blink
   set -g fish_cursor_visual      block
 end
-
