@@ -13,7 +13,12 @@
     gping # Modern Unix `ping`
     grc # Colour terminal output
     lunarvim
+    pipx # Install and run Python applications in isolated environments
+    poetry # Python dependency management and packaging made easy
+    pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     procs # Modern Unix `ps`
+    python312Packages.ipython # IPython: Productive Interactive Computing
+    python312Packages.bpython # A fancy curses interface to the Python interactive interpreter
     ripgrep # Modern Unix `grep`
     tldr # Modern Unix `man`
     uv # Replacement for pip written in Rust

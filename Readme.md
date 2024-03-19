@@ -34,6 +34,11 @@ The home manager configuration of this repository includes tools like:
 - With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
 - The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
 - [lunarvim](https://www.lunarvim.org): An IDE layer for Neovim with sane defaults. Completely free and community driven.
+- pipx: Install and run Python applications in isolated environments
+- poetry: Python dependency management and packaging made easy
+- pre-commit: A framework for managing and maintaining multi-language pre-commit hooks
+- ipython (Python 3.12): Productive Interactive Computing
+- bpython (Python 3.12): A fancy curses interface to the Python interactive interpreter
 - [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
 - [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
 - [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
@@ -47,7 +52,6 @@ The home manager configuration of this repository includes tools like:
 - [neovim](https://neovim.io/): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix)
 - [nixpkgs-fmt](https://nix-community.github.io/nixpkgs-fmt/): Nix code formatter for nixpkgs.
 - [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
-- Python 3.11, with `pip`, `pipx` and `virtualenv`. This means that you do not depend on your distribution's Python.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
 - [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
