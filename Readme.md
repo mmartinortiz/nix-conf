@@ -20,6 +20,7 @@ The home manager configuration of this repository includes tools like:
 
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
 - [bottom](https://github.com/ClementTsang/bottom): Yet another cross-platform graphical process/system monitor.
+- [bpython](https://bpython-interpreter.org/) (Python 3.12): A fancy curses interface to the Python interactive interpreter
 - [chafa](https://hpjansson.org/chafa/): Terminal graphics for the 21st century.
 - [deadnix](https://github.com/astro/deadnix): Scan Nix files for dead code.
 - [diffr](https://github.com/mookid/diffr): Yet another diff highlighting tool.
@@ -29,32 +30,31 @@ The home manager configuration of this repository includes tools like:
 - [duf](https://github.com/muesli/duf): Disk Usage/Free Utility - a better 'df' alternative.
 - [exa](https://the.exa.website/): A modern replacement for ls.
 - [fd](https://github.com/sharkdp/fd): A simple, fast and user-friendly alternative to 'find'.
-- [fish shell](https://fishshell.com): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish).
-- With [aliases](https://fishshell.com/docs/current/cmds/alias.html) for cat, diff, etc...
-- With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
-- The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
-- [lunarvim](https://www.lunarvim.org): An IDE layer for Neovim with sane defaults. Completely free and community driven.
-- pipx: Install and run Python applications in isolated environments
-- poetry: Python dependency management and packaging made easy
-- pre-commit: A framework for managing and maintaining multi-language pre-commit hooks
-- ipython (Python 3.12): Productive Interactive Computing
-- bpython (Python 3.12): A fancy curses interface to the Python interactive interpreter
-- [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
-- [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
-- [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
-- [sponge](https://github.com/meaningful-ooo/sponge) plugin. Clean fish history from typos automatically.
-- [pisces](https://github.com/laughedelic/pisces) plugin. Helps you to work with paired symbols in the command line.
-- [autovenv](https://github.com/mmartinortiz/fish-autovenv) plugin. Enable Python environments automatically.
+- [fish shell](https://fishshell.com): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish). with some plugins:
+  - With [aliases](https://fishshell.com/docs/current/cmds/alias.html) for cat, diff, etc...
+  - With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
+  - [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
+  - [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
+  - [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
+  - The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
+  - [sponge](https://github.com/meaningful-ooo/sponge) plugin. Clean fish history from typos automatically.
+  - [pisces](https://github.com/laughedelic/pisces) plugin. Helps you to work with paired symbols in the command line.
+  - [autovenv](https://github.com/mmartinortiz/fish-autovenv) plugin. Enable Python environments automatically.
 - git: By now you should now what this is.
 - [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI.
 - [gping](https://github.com/orf/gping): Ping, but with a graph.
 - [grc](https://github.com/garabik/grc): Generic colouriser.
+- [ipython](https://ipython.org/) (Python 3.12): Productive Interactive Computing
+- [lunarvim](https://www.lunarvim.org): An IDE layer for Neovim with sane defaults. Completely free and community driven.
 - [neovim](https://neovim.io/): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix)
 - [nixpkgs-fmt](https://nix-community.github.io/nixpkgs-fmt/): Nix code formatter for nixpkgs.
+- [pipx](https://pipx.pypa.io/stable/): Install and run Python applications in isolated environments
+- [poetry](https://python-poetry.org/): Python dependency management and packaging made easy
+- [pre-commit](https://pre-commit.com/): A framework for managing and maintaining multi-language pre-commit hooks
 - [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
-- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
+- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
 - Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
 
