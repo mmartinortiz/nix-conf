@@ -13,7 +13,7 @@
     gping # Modern Unix `ping`
     grc # Colour terminal output
     lunarvim
-    pipx # Install and run Python applications in isolated environments
+    # pipx # Install and run Python applications in isolated environments
     poetry # Python dependency management and packaging made easy
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     procs # Modern Unix `ps`
