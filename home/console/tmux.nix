@@ -6,8 +6,20 @@
   # Server specific configuration
   programs.tmux = {
     enable = true;
+    # Automatically spawn a session if trying to attach and none are running.
+    newSession = true;
+    # Set the prefix key. Overrules the “shortcut” option when set.
     prefix = "C-a";
-    shortcut = "a";
+    # Use 24 hour clock.
+    clock24 = true;
+    # VI or Emacs style shortcuts.
+    keyMode = "vi";
+    # Whether to enable mouse support.
+    mouse = true;
+    # Set the default-shell tmux variable.
+    shell = "${config.home.homeDirectory}/.nix-profile/bin/fish";
+    # Set the $TERM variable.
+    terminal = "screen-256color";
     plugins = with pkgs.tmuxPlugins; [
       nord
       vim-tmux-navigator
@@ -25,15 +37,6 @@
         '';
       }
       {
-        # https://github.com/tmux-plugins/tmux-continuum
-        # Continuous saving of tmux environment. Automatic restore when tmux is started.
-        plugin = continuum;
-        extraConfig = ''
-          set -g @continuum-save-interval '15'
-          set -g @continuum-restore 'on'
-        '';
-      }
-      {
         # https://github.com/tmux-plugins/tmux-resurrect
         # Manually persists tmux environment across system restarts.
         #   prefix + Ctrl-s - save
@@ -41,14 +44,23 @@
         #
         plugin = resurrect;
         # Restore Neovim sessions
-        extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+        extraConfig = ''
+          set -g @resurrect-strategy-nvim 'session'
+          set -g @resurrect-strategy-vim 'session'
+          set -g @resurrect-capture-pane-contents 'on'
+        '';
+      }
+      {
+        # https://github.com/tmux-plugins/tmux-continuum
+        # Continuous saving of tmux environment. Automatic restore when tmux is started.
+        plugin = continuum;
+        extraConfig = ''
+          set -g @continuum-save-interval '5'
+          set -g @continuum-restore 'on'
+          set -g @continuum-boot 'on'
+        '';
       }
     ];
-    clock24 = true;
-    keyMode = "vi";
-    mouse = true;
-    shell = "${config.home.homeDirectory}/.nix-profile/bin/fish";
-    terminal = "screen-256color";
     extraConfig = ''
       bind k next-window
       bind j previous-window
