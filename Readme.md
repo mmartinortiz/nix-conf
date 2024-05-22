@@ -99,14 +99,10 @@ nix run nixpkgs#home-manager -- switch --flake .#laptop
 nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/#laptop
 ```
 
-For setting the Fish Shell managed by Home Manager as the default shell for the user, add the full path of the shell to `/etc/shells` and later use `chsh -s` and indicate the full path. **This may be a security risk if you share your computer with other users and they use your shell**.
+For using the Fish shell managed by Home Manager together with the other goodies, setup your favourite terminal emulator to start the following command:
 
 ```bash
-> which fish
-/home/user/.nix-profile/bin/fish
-> sudo vim /etc/shells
-# Add the previous full path to file
-> chsh -s /home/user/.nix-profile/bin/fish
+/home/user/.nix-profile/bin/tmux attach
 ```
 
 ## How to's
