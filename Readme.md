@@ -45,7 +45,6 @@ The home manager configuration of this repository includes tools like:
 - [gping](https://github.com/orf/gping): Ping, but with a graph.
 - [grc](https://github.com/garabik/grc): Generic colouriser.
 - [ipython](https://ipython.org/) (Python 3.12): Productive Interactive Computing
-- [lunarvim](https://www.lunarvim.org): An IDE layer for Neovim with sane defaults. Completely free and community driven.
 - [neovim](https://neovim.io/): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix)
 - [nixpkgs-fmt](https://nix-community.github.io/nixpkgs-fmt/): Nix code formatter for nixpkgs.
 - [pipx](https://pipx.pypa.io/stable/): Install and run Python applications in isolated environments

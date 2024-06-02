@@ -3,8 +3,8 @@
     ./config/keyboard_mapping.nix
     ./config/barbar.nix
     ./config/gitsigns.nix
-    ./config/telescope.nix
-    ./config/lsp.nix
+    # ./config/telescope.nix
+    # ./config/lsp.nix
   ];
   programs = {
     nixvim = {
@@ -16,9 +16,9 @@
         number = true;
       };
 
-      extraPackages = [
-        pkgs.pyright
-      ];
+      # extraPackages = [
+      #   pkgs.pyright
+      # ];
 
       colorschemes = {
         catppuccin = {
@@ -79,10 +79,10 @@
         };
 
         # Toggle term
-        toggleterm = {
-          enable = true;
-          direction = "horizontal";
-        };
+        # toggleterm = {
+        #   enable = true;
+        #   direction = "horizontal";
+        # };
 
         tmux-navigator = {
           enable = true;

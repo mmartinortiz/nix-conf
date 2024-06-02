@@ -15,18 +15,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-      # url = "github:nix-community/nixvim/nixos-23.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+    kickstart-nix-nvim = {
+      url = "github:mmartinortiz/neovim-conf";
     };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    nixvim,
+    kickstart-nix-nvim,
     ...
   }: let
     system = "x86_64-linux";
@@ -36,7 +33,11 @@
       laptop = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          nixvim.homeManagerModules.nixvim
+          {
+            nixpkgs.overlays = [
+              kickstart-nix-nvim.overlays.default
+            ];
+          }
           ./home/default.nix
           ./machines/laptop.nix
         ];
@@ -44,7 +45,6 @@
       server = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          nixvim.homeManagerModules.nixvim
           ./home/default.nix
           ./machines/server.nix
         ];

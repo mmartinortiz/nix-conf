@@ -12,7 +12,7 @@
     glow # Terminal Markdown renderer
     gping # Modern Unix `ping`
     grc # Colour terminal output
-    lunarvim
+    nvim-pkg
     # pipx # Install and run Python applications in isolated environments
     poetry # Python dependency management and packaging made easy
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
@@ -43,13 +43,10 @@ in {
     #     pkgs.another-package
     #   ];
 
-    # FIXME: if you want to version your LunarVim config, add it to the root of this repo and uncomment the next line
-    file.".config/lvim/config.lua".source = ./console/lunarvim/config.lua;
-
     sessionVariables = {
-      EDITOR = "lvim";
-      SYSTEMD_EDITOR = "lvim";
-      VISUAL = "lvim";
+      EDITOR = "nvim";
+      SYSTEMD_EDITOR = "nvim";
+      VISUAL = "nvim";
     };
   };
 
@@ -62,7 +59,6 @@ in {
     ./console/git.nix
     ./console/lazygit.nix
     ./console/micro.nix
-    # ./console/neovim
     ./console/tmux.nix
   ];
 
