@@ -29,7 +29,7 @@ in {
   home = {
     username = "manolo";
     homeDirectory = "/home/manolo";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     packages = my-packages;
 
