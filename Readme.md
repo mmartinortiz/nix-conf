@@ -57,7 +57,7 @@ The home manager configuration of this repository includes tools like:
 - [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
 - Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
 
-This list would be out of date. For a full reference check the [`home.nix`](./home-manager/home.nix) file. It also does other things, like setting up `fish` as the default shell for the user (via Bash, because `chsh` cannot see `Home-manager`'s fish installation), install plugins for Vim or setting the default editor to Vim. For a full always up to date reference, check the [`home.nix`](./home-manager/home.nix) file.
+This list would be out of date. For a full reference check the [`home.nix`](./home-manager/home.nix) file.
 
 ## Install
 
@@ -101,7 +101,7 @@ nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/#laptop
 For using the Fish shell managed by Home Manager together with the other goodies, setup your favourite terminal emulator to start the following command:
 
 ```bash
-/home/user/.nix-profile/bin/tmux attach
+/home/user/.nix-profile/bin/tmux new-session -A
 ```
 
 ## How to's
