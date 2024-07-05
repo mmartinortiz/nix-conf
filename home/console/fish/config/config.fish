@@ -15,3 +15,6 @@ if test -n "$TERM"
   set -g fish_cursor_replace_one underscore blink
   set -g fish_cursor_visual      block
 end
+
+# Sponge plugin config
+set sponge_delay 5
