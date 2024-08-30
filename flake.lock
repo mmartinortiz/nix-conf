@@ -79,11 +79,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1725026525,
-        "narHash": "sha256-QiBYi18hnMlyFLIK+zu7qDuLZEcG/dtx0Ri8R8b4d8c=",
+        "lastModified": 1725027935,
+        "narHash": "sha256-OpKbaH7SxaQAzzdY4DD9nErNX/JTPEyrYaIHVJvHEuM=",
         "owner": "mmartinortiz",
         "repo": "neovim-conf",
-        "rev": "45877fa577201e9a791ec020c7d9e0cb07328c4a",
+        "rev": "8b3fa84a083c0881cf51a343c2d443f38cda158c",
         "type": "github"
       },
       "original": {
