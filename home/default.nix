@@ -14,7 +14,6 @@
     grc # Colour terminal output
     nvim-pkg
     # pipx # Install and run Python applications in isolated environments
-    poetry # Python dependency management and packaging made easy
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     procs # Modern Unix `ps`
     python312Packages.ipython # IPython: Productive Interactive Computing
@@ -60,6 +59,7 @@ in {
     ./console/lazygit.nix
     ./console/micro.nix
     ./console/tmux.nix
+    ./console/poetry.nix
   ];
 
   programs = {
