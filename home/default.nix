@@ -4,6 +4,7 @@
     chafa # Terminal image viewer
     deadnix
     devbox # Create isolated shells for development
+    devcontainer
     diffr # Modern Unix `diff`
     du-dust
     dua # Modern Unix `du`
