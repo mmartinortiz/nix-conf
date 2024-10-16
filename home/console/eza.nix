@@ -2,7 +2,7 @@
   programs.eza = {
     enable = true;
     enableFishIntegration = true;
-    icons = true;
+    icons = "auto";
     git = true;
     extraOptions = [
       "--hyperlink"
