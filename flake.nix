@@ -17,7 +17,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations = {
-      default = home-manager.lib.homeManagerConfiguration {
+      manolo = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           {
