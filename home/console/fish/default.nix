@@ -34,6 +34,7 @@
       gc = "git commit -m";
       gp = "git push";
       nr = "nix run nixpkgs#home-manager -- switch --flake .";
+      nu = "nix flake update && nix run nixpkgs#home-manager -- switch --flake . && nix-store --gc";
       db = "devbox";
       dbs = "devbox shell";
     };

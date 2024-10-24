@@ -17,7 +17,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations = {
-      laptop = home-manager.lib.homeManagerConfiguration {
+      default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           {
@@ -26,19 +26,6 @@
             ];
           }
           ./home/default.nix
-          ./machines/laptop.nix
-        ];
-      };
-      server = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          {
-            nixpkgs.overlays = [
-              kickstart-nix-nvim.overlays.default
-            ];
-          }
-          ./home/default.nix
-          ./machines/server.nix
         ];
       };
     };
