@@ -63,9 +63,7 @@ in {
     ./console/poetry.nix
   ];
 
-  programs = {
-    home-manager.enable = true;
-  };
+  programs = {home-manager.enable = true;};
 
   fonts.fontconfig.enable = true;
 }
