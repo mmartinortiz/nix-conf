@@ -46,18 +46,14 @@
         key = "<c-_>";
         mode = "n";
         action = "<Plug>(comment_toggle_linewise_current)";
-        options = {
-          desc = "Comment line";
-        };
+        options = {desc = "Comment line";};
       }
       # Neovim seems to register <C-/> as <C-_>
       {
         key = "<C-_>";
         action = "<Plug>(comment_toggle_linewise_visual)";
         mode = "v";
-        options = {
-          desc = "Comment line/block";
-        };
+        options = {desc = "Comment line/block";};
       }
     ];
   };

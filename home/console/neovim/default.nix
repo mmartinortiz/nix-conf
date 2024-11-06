@@ -12,9 +12,7 @@
       viAlias = true;
       vimAlias = true;
 
-      options = {
-        number = true;
-      };
+      options = {number = true;};
 
       # extraPackages = [
       #   pkgs.pyright
@@ -84,13 +82,9 @@
         #   direction = "horizontal";
         # };
 
-        tmux-navigator = {
-          enable = true;
-        };
+        tmux-navigator = {enable = true;};
 
-        which-key = {
-          enable = true;
-        };
+        which-key = {enable = true;};
       };
     };
   };
