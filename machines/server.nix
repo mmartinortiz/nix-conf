@@ -10,8 +10,12 @@
 
     fish = {
       shellAbbrs = {
-        nr = pkgs.lib.mkForce "nix run nixpkgs#home-manager -- switch --flake .#server";
-        nu = pkgs.lib.mkForce "nix flake update && nix run nixpkgs#home-manager -- switch --flake .#server && nix-store --gc";
+        nr =
+          pkgs.lib.mkForce
+          "nix run nixpkgs#home-manager -- switch --flake .#server";
+        nu =
+          pkgs.lib.mkForce
+          "nix flake update && nix run nixpkgs#home-manager -- switch --flake .#server && nix-store --gc";
       };
     };
   };
