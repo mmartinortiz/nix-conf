@@ -19,4 +19,16 @@
   imports = [
     ./common.nix
   ];
+
+  # Laptop specific configuration
+  programs.fish = {
+    interactiveShellInit = ''
+      fish_add_path ~/bin
+    '';
+    shellAbbrs = {
+      nu =
+        pkgs.lib.mkForce
+        "nix flake update && nix run nixpkgs#home-manager -- switch && nix-store --gc";
+    };
+  };
 }
