@@ -1,5 +1,5 @@
 {
-  "packages": ["pre-commit@latest", "alejandra@latest", "nixfmt@latest"],
+  "packages": ["pre-commit@latest", "alejandra@latest"],
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox!' > /dev/null",
