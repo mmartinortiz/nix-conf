@@ -35,20 +35,3 @@ vim.opt.compatible = false
 
 -- Search down into subfolders
 vim.opt.path = vim.o.path .. '**'
-
-
--- syntax on
--- filetype plugin on
--- filetype plugin indent on
-
-
--- opt.statusline=
--- opt.statusline +=%1*\ %n\ %*            "buffer number
--- set statusline +=%1*%{&ff}%*            "file format
--- set statusline +=%1*%y%*                "file type
--- set statusline +=%1*\ %<%F%*            "full path
--- set statusline +=%1*%m%*                "modified flag
--- set statusline +=%1*%=%5l%*             "current line
--- set statusline +=%1*/%L%*               "total lines
--- set statusline +=%1*%4v\ %*             "virtual column number
--- set statusline +=%1*0x%04B\ %*          "character under cursor
