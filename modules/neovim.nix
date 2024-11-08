@@ -31,6 +31,7 @@
       noice-nvim
       nui-nvim
       nvim-autopairs
+      vim-lastplace
       nvim-notify
       nvim-surround
       nvim-treesitter-context # nvim-treesitter-context
