@@ -3,61 +3,13 @@
 Repository containing my `dotfiles` configuration, managed via [home manager](https://nix-community.github.io/home-manager/index.html). The original intention is not to configure a full NixOS system, but my daily machine, which runs Ubuntu. In the future I may try to use NixOS as daily computer system.
 
 - [My Nix configuration](#my-nix-configuration)
-  - [Overview](#overview)
   - [Install](#install)
     - [Dependencies](#dependencies)
     - [Install Nix](#install-nix)
     - [Activate the configuration](#activate-the-configuration)
   - [How to's](#how-tos)
     - [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
-  - [An specific environment for Python](#an-specific-environment-for-python)
-  - [NeoVim](#neovim)
   - [Resources](#resources)
-
-## Overview
-
-The home manager configuration of this repository includes tools like:
-
-- [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
-- [bottom](https://github.com/ClementTsang/bottom): Yet another cross-platform graphical process/system monitor.
-- [bpython](https://bpython-interpreter.org/) (Python 3.12): A fancy curses interface to the Python interactive interpreter
-- [chafa](https://hpjansson.org/chafa/): Terminal graphics for the 21st century.
-- [deadnix](https://github.com/astro/deadnix): Scan Nix files for dead code.
-- [diffr](https://github.com/mookid/diffr): Yet another diff highlighting tool.
-- [direnv](https://direnv.net/): Get into a folder and automatically load `.env` files
-- [du-dust](https://github.com/bootandy/dust): A more intuitive version of `du` in Rust.
-- [dua](https://github.com/Byron/dua-cli): View disk space usage and delete unwanted data, fast.
-- [duf](https://github.com/muesli/duf): Disk Usage/Free Utility - a better 'df' alternative.
-- [exa](https://the.exa.website/): A modern replacement for ls.
-- [fd](https://github.com/sharkdp/fd): A simple, fast and user-friendly alternative to 'find'.
-- [fish shell](https://fishshell.com): A smart and user-friendly command line shell for Linux, macOS, and the rest of the family. See [fish.nix](./home-manager/apps/fish.nix) and [config.fish](./home-manager/apps/config.fish). with some plugins:
-  - With [aliases](https://fishshell.com/docs/current/cmds/alias.html) for cat, diff, etc...
-  - With [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html) for git
-  - [pure](https://github.com/pure-fish/pure) Pretty, minimal, and fast prompt for Fish shell inspired by sindresorhus/pure.
-  - [colored-man-pages](https://github.com/PatrickF1/colored_man_pages.fish) plugin. Fish shell plugin to colorize man pages.
-  - [bass](https://github.com/edc/bass). Make Bash utilities usable in Fish shell.
-  - The [grc](https://github.com/oh-my-fish/plugin-grc) plugin. `grc` Colourizer for some commands.
-  - [sponge](https://github.com/meaningful-ooo/sponge) plugin. Clean fish history from typos automatically.
-  - [pisces](https://github.com/laughedelic/pisces) plugin. Helps you to work with paired symbols in the command line.
-  - [autovenv](https://github.com/mmartinortiz/fish-autovenv) plugin. Enable Python environments automatically.
-- git: By now you should now what this is.
-- [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI.
-- [gping](https://github.com/orf/gping): Ping, but with a graph.
-- [grc](https://github.com/garabik/grc): Generic colouriser.
-- [ipython](https://ipython.org/) (Python 3.12): Productive Interactive Computing
-- [neovim](https://neovim.io/): An iteration over the Great Vim, with focus on new interfaces. The configuration is strongly inspired (mostly copied) from [this NeoVim config](https://github.com/workflow/nixos-config/blob/5fb8b79b17e8edf3ac800179f6e2dfc75fa8bd22/home/neovim.nix)
-- [nixpkgs-fmt](https://nix-community.github.io/nixpkgs-fmt/): Nix code formatter for nixpkgs.
-- [pipx](https://pipx.pypa.io/stable/): Install and run Python applications in isolated environments
-- [poetry](https://python-poetry.org/): Python dependency management and packaging made easy
-- [pre-commit](https://pre-commit.com/): A framework for managing and maintaining multi-language pre-commit hooks
-- [procs](https://github.com/dalance/procs): A modern replacement for ps written in Rust.
-- [ripgrep](https://github.com/BurntSushi/ripgrep): recursively searches directories for a regex pattern while respecting your gitignore.
-- [tldr](https://tldr.sh/): Collaborative cheat-sheets for console commands.
-- [tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer, with plugins like [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) or [yank](https://github.com/tmux-plugins/tmux-yank). See the [tmux wiki](https://github.com/tmux/tmux/wiki/Getting-Started)
-- [wget2](https://gitlab.com/gnuwget/wget2): The successor of GNU Wget.
-- Fonts: [Hack](https://sourcefoundry.org/hack/), [Ubuntu Mono](https://design.ubuntu.com/font) and [FiraCode](https://github.com/tonsky/FiraCode).
-
-This list would be out of date. For a full reference check the [`home.nix`](./home-manager/home.nix) file.
 
 ## Install
 
@@ -80,25 +32,25 @@ After installing `nix` reopen the terminal for reloading the `PATH` variable.
 
 ### Activate the configuration
 
-Add the flag `-b backup` if you get an error about one of your files already existing.
+Create a symbolic link called `home.nix` to the machine it is installed.
 
-There are currently two different profiles:
-
-- `laptop`: The default configuration.
-- `server`: Laptop's configuration plus some specifics for a server.
-
-```shell
-# Backup the current bashrc
-mv ~/.bashrc ~/.bashrc.backup
-
-# From the 'nix-conf' folder
-nix run nixpkgs#home-manager -- switch --flake .#laptop
-
-# Alternatively
-nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/#laptop
+```bash
+ln -s juno.nix home.nix
 ```
 
-For using the Fish shell managed by Home Manager together with the other goodies, setup your favourite terminal emulator to start the following command:
+Create a symbolic link from the `~/.config` folder to this repository.
+
+```bash
+ln -s ~/Projects/nix-conf ~/.config/home-manager
+```
+
+Then activate the configuration with
+
+```bash
+home-manager switch
+```
+
+For using the Fish shell managed by Home Manager together with the other goodies, setup your favorite terminal emulator to start the following command:
 
 ```bash
 /home/user/.nix-profile/bin/tmux new-session -A
@@ -129,28 +81,6 @@ error: hash mismatch in fixed-output derivation '/nix/store/yldav2adi4kr8ypfx0sw
 specified: sha256-zBB5Ow4FfzhM8QXRT0E174ZHessf1OU57K8co+ReuFw=
 got:     sha256-f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo= # Use this one.
 ```
-
-## An specific environment for Python
-
-If you create a Python virtual environment using the `pip` command installed by Home Manager, it will fail to compile some Python packages, like Numpy or iPython, that require of `libstdc`. One solution is to install those packages via Nix.
-
-But if you need/want to use a Virtual Environment in you Python project, you have then two options:
-
-1. When creating the virtual environment for the Python project, use the system's Python interpreter instead of the Nix's Python interpreter.
-2. Start a `nix-shell` that mounts the "host" file system to the shell. There is an example in `python-shell.nix` that can be run with `nix-shell python-shell.nix`.
-
-## NeoVim
-
-Some of the things it brings:
-
-- LSP for Python with Pyright, CMP (completion plugin) and [treesitter](https://github.com/tree-sitter/tree-sitter).
-- [BarBar](https://github.com/romgrk/barbar.nvim): The neovim tabline plugin.
-- [LuaLine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip): Snippet Engine for Neovim written in Lua.
-- [Autopairs](https://github.com/windwp/nvim-autopairs): Autopairs for neovim written by Lua.
-- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim): A neovim lua plugin to help easily manage multiple terminal windows.
-- [GitSigns](https://github.com/lewis6991/gitsigns.nvim): Git integration for buffers.
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim): Find, Filter, Preview, Pick. Files and more.
 
 ## Resources
 

@@ -4,10 +4,6 @@
     enableFishIntegration = true;
     icons = "auto";
     git = true;
-    extraOptions = [
-      "--hyperlink"
-      "--group-directories-first"
-      "--header"
-    ];
+    extraOptions = ["--hyperlink" "--group-directories-first" "--header"];
   };
 }

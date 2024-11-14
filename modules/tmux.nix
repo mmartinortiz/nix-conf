@@ -19,7 +19,7 @@
     # Set the default-shell tmux variable.
     shell = "${config.home.homeDirectory}/.nix-profile/bin/fish";
     # Set the $TERM variable.
-    terminal = "screen-256color";
+    terminal = "tmux-256color";
     plugins = with pkgs.tmuxPlugins; [
       nord
       vim-tmux-navigator

@@ -97,33 +97,9 @@
         # Ctrl+Space to trigger completion menu
         "<C-Space>" = "cmp.mapping.complete()";
         # Navigate between snippet placeholder
-        "<C-j>" = "
-                cmp.mapping(function(fallback)
-                  if cmp.visible() then
-                          cmp.select_next_item()
-                  elseif vim.fn['vsnip#available'](1) == 1 then
-                          feedkey('<Plug>(vsnip-expand-or-jump)', '')
-                  elseif has_words_before() then
-                          cmp.complete()
-                  else
-                          fallback()
-                  end
-                end, {
-                  'i',
-                  's',
-                })";
+        "<C-j>" = "\n                cmp.mapping(function(fallback)\n                  if cmp.visible() then\n                          cmp.select_next_item()\n                  elseif vim.fn['vsnip#available'](1) == 1 then\n                          feedkey('<Plug>(vsnip-expand-or-jump)', '')\n                  elseif has_words_before() then\n                          cmp.complete()\n                  else\n                          fallback()\n                  end\n                end, {\n                  'i',\n                  's',\n                })";
 
-        "<C-k>" = "
-                cmp.mapping(function()
-                  if cmp.visible() then
-                          cmp.select_prev_item()
-                  elseif vim.fn['vsnip#jumpable'](-1) == 1 then
-                          feedkey('<Plug>(vsnip-jump-prev)', '')
-                  end
-                end, {
-                  'i',
-                  's',
-                })";
+        "<C-k>" = "\n                cmp.mapping(function()\n                  if cmp.visible() then\n                          cmp.select_prev_item()\n                  elseif vim.fn['vsnip#jumpable'](-1) == 1 then\n                          feedkey('<Plug>(vsnip-jump-prev)', '')\n                  end\n                end, {\n                  'i',\n                  's',\n                })";
       };
     };
     plugins = {

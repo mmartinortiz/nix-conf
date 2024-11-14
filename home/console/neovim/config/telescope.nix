@@ -9,9 +9,7 @@
     plugins.telescope.extensions.fzf-native.enable = true;
     #plugins.telescope.extensions.media_files.enable = true;
 
-    extraPlugins = with pkgs.vimPlugins; [
-      telescope-ui-select-nvim
-    ];
+    extraPlugins = with pkgs.vimPlugins; [telescope-ui-select-nvim];
 
     keymaps = [
       {

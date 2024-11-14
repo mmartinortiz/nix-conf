@@ -73,8 +73,6 @@
         }
       '';
 
-    extraPlugins = [
-      pkgs.vimPlugins.gitsigns-nvim
-    ];
+    extraPlugins = [pkgs.vimPlugins.gitsigns-nvim];
   };
 }
