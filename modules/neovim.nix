@@ -16,6 +16,7 @@
       "${lib.strings.fileContents ./neovim/init.lua}"
       "${lib.strings.fileContents ./neovim/autopairs.lua}"
       "${lib.strings.fileContents ./neovim/bufferline.lua}"
+      "${lib.strings.fileContents ./neovim/gitsigns.lua}"
       "${lib.strings.fileContents ./neovim/noice.lua}"
       "${lib.strings.fileContents ./neovim/comment.lua}"
       "${lib.strings.fileContents ./neovim/treesitter.lua}"
@@ -27,11 +28,11 @@
     plugins = with pkgs.vimPlugins; [
       bufferline-nvim
       comment-nvim
+      gitsigns-nvim
       mini-nvim
       noice-nvim
       nui-nvim
       nvim-autopairs
-      vim-lastplace
       nvim-notify
       nvim-surround
       nvim-treesitter-context # nvim-treesitter-context
@@ -40,6 +41,7 @@
       nvim-web-devicons
       statuscol-nvim
       telescope-nvim
+      vim-lastplace
       vim-tmux-navigator
       which-key-nvim
     ];
