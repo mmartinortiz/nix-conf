@@ -18,6 +18,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    alejandra # Nix formatter
     chafa # Terminal image viewer
     devbox # Create isolated shells for development
     devcontainer # A reference implementation for the specification
