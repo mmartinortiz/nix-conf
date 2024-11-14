@@ -18,7 +18,6 @@
     shellAliases = {
       cat = "bat";
       man = "batman";
-      diff = "diffr";
       glow = "glow --pager";
       ip = "ip --color --brief";
       less = "bat --paging=always";
