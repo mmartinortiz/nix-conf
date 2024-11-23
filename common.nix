@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./modules/aichat.nix
     ./modules/bat.nix
     ./modules/bottom.nix
     ./modules/direnv.nix
