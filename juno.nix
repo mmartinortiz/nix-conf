@@ -19,6 +19,11 @@
   imports = [
     ./common.nix
   ];
+  programs.tmux = {
+    plugins = with pkgs.tmuxPlugins; [
+      catppuccin
+    ];
+  };
 
   # Laptop specific configuration
   programs.fish = {
