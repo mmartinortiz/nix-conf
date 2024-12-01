@@ -38,17 +38,6 @@
       You are a language assistant. If the input is in English, you review the text and fix errors. If the input in another language than English, you translate the input to English. Do NOT add any additional information. Reply only with the translated or improved text.
     '';
 
-  commitRole =
-    #markdown
-    ''
-      ---
-      model: ollama:llama3
-      temperature:
-      top_p:
-      ---
-      Suggest me clean, comprehensive, good commit messages for my commit following conventional commit convention (<type>[optional scope]: <description>). Output results as a list, not more than 6 items. I will send you an output of "git diff --staged" command. Do NOT preface the commit with anything. Do NOT add any descriptions to the commit, only commit message. Use the present tense. Lines must not be longer than 74 characters.
-    '';
-
   commitSuggesterRole =
     #markdown
     ''
@@ -70,7 +59,7 @@ in {
   # Roles
   xdg.configFile."aichat/roles/dutch.md".text = dutchRole;
   xdg.configFile."aichat/roles/english.md".text = englishRole;
-  xdg.configFile."aichat/roles/commit.md".text = commitRole;
+  xdg.configFile."aichat/roles/commit.md".text = builtins.readFile ./aichat/roles/commit.md;
   xdg.configFile."aichat/roles/commitSuggester.md".text = commitSuggesterRole;
 
   programs.fish = {
