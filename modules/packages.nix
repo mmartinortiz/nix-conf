@@ -36,5 +36,8 @@
     uv # Replacement for pip written in Rust
     wget2 # The successor of GNU Wget
     (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
+    # nerd-fonts.hack
+    # nerd-fonts.unbuntu-mono
+    # nerd-fonts.fira-code
   ];
 }
