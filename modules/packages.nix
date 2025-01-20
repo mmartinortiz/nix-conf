@@ -35,9 +35,9 @@
     tldr # Modern Unix `man`
     uv # Replacement for pip written in Rust
     wget2 # The successor of GNU Wget
-    (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
-    # nerd-fonts.hack
-    # nerd-fonts.unbuntu-mono
-    # nerd-fonts.fira-code
+    # (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
+    nerd-fonts.hack
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.fira-code
   ];
 }
