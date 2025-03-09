@@ -33,6 +33,7 @@
     procs # Modern Unix `ps`
     ripgrep # Modern Unix `grep`
     tldr # Modern Unix `man`
+    television # A cross-platform, fast and extensible general purpose fuzzy finder TUI.
     uv # Replacement for pip written in Rust
     wget2 # The successor of GNU Wget
     # (pkgs.nerdfonts.override {fonts = ["Hack" "UbuntuMono" "FiraCode"];})
